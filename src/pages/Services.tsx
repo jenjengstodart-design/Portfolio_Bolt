@@ -37,7 +37,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-hero font-bold mb-6">Services</h1>
+            <h1 className="text-hero font-bold mb-6">My Expertise</h1>
             <p className="text-h3 text-text-light max-w-3xl mx-auto">
               AI-enhanced, human-centred innovation and transformation
             </p>
@@ -77,7 +77,7 @@ export default function Services() {
                     to="/contact"
                     className="btn-primary inline-flex items-center gap-2"
                   >
-                    Discuss This Service
+                    Discuss This Expertise
                     <ArrowRight size={20} />
                   </Link>
                 </motion.div>
@@ -176,7 +176,7 @@ export default function Services() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Ready to Get Started?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how these services can help your organization achieve its goals.
+              Let's discuss how my expertise can help your organization achieve its goals.
             </p>
             <Link
               to="/contact"

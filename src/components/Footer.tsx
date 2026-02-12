@@ -19,8 +19,8 @@ export default function Footer() {
           <div>
             <h4 className="text-body font-semibold mb-4 text-white">Quick Links</h4>
             <div className="flex flex-col gap-2">
-              <Link to="/services" className="text-small opacity-90 hover:opacity-100 hover:text-accent-red transition-colors">
-                Services
+              <Link to="/expertise" className="text-small opacity-90 hover:opacity-100 hover:text-accent-red transition-colors">
+                Expertise
               </Link>
               <Link to="/work" className="text-small opacity-90 hover:opacity-100 hover:text-accent-red transition-colors">
                 Work

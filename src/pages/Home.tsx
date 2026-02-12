@@ -73,7 +73,7 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link
-                    to={`/services#${service.id}`}
+                    to={`/expertise#${service.id}`}
                     className="block bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 h-full"
                   >
                     <div className="w-12 h-12 bg-accent-red/10 rounded-full flex items-center justify-center mb-4">
