@@ -91,9 +91,9 @@ export default function Services() {
                 >
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-h3 font-bold mb-3">Who It's For</h3>
+                      <h3 className="text-h3 font-bold mb-3">When do you need it</h3>
                       <ul className="space-y-2">
-                        {service.whoItsFor.map((item) => (
+                        {service.whenYouNeedIt.map((item) => (
                           <li key={item} className="text-body text-text-secondary flex items-start gap-2">
                             <span className="w-1.5 h-1.5 bg-accent-red rounded-full mt-2 flex-shrink-0"></span>
                             <span>{item}</span>

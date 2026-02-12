@@ -244,8 +244,12 @@ View analytics in Supabase:
 
 This project is proprietary and confidential.
 
+## Recent Changes
+
+See [CHANGELOG.md](./CHANGELOG.md) for detailed change history.
+
 ## Contact
 
 For questions or support, contact Jen Jeng:
 - LinkedIn: https://www.linkedin.com/in/jenjeng/
-- Email: contact@jenjeng.com
+- Email: jen.jengstodart@gmail.com

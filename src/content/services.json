@@ -6,7 +6,7 @@
       "icon": "Lightbulb",
       "shortDescription": "Navigate complexity with strategic foresight and agile innovation design",
       "fullDescription": "I help organisations build innovation capabilities that drive sustainable growth. From setting up innovation functions to coaching C-suite leaders on building innovative companies, I bring structure to complexity.",
-      "whoItsFor": [
+      "whenYouNeedIt": [
         "C-suite leaders building innovation capabilities",
         "Scale-ups needing structured innovation processes",
         "Enterprises transforming legacy operations"
@@ -32,7 +32,7 @@
       "icon": "Users",
       "shortDescription": "Create desirable products and services through design sprints and validation",
       "fullDescription": "I blend research, design thinking, and rapid prototyping to create experiences that people actually want. User research, journey mapping, and experience optimization are at the core of my approach.",
-      "whoItsFor": [
+      "whenYouNeedIt": [
         "Product teams validating new concepts",
         "Service organisations redesigning experiences",
         "Companies solving complex customer problems"
@@ -58,7 +58,7 @@
       "icon": "TrendingUp",
       "shortDescription": "Align stakeholders and accelerate time-to-value for future-ready growth",
       "fullDescription": "I guide organisations through complex transformations—from operating model redesign to digital transformation. My focus is on aligning stakeholders, building internal capability, and delivering measurable outcomes.",
-      "whoItsFor": [
+      "whenYouNeedIt": [
         "Organisations undergoing digital transformation",
         "Companies redesigning operating models",
         "Leadership teams driving strategic change"
@@ -84,7 +84,7 @@
       "icon": "Sparkles",
       "shortDescription": "Build AI capabilities that enhance productivity and unlock new value",
       "fullDescription": "I help organisations navigate the AI landscape—from AI strategy development to hands-on capability building. My approach demystifies AI and enables teams to use it as a collaborative partner, not just a tool.",
-      "whoItsFor": [
+      "whenYouNeedIt": [
         "Organisations building AI capabilities",
         "Teams wanting to integrate AI into workflows",
         "Leaders developing AI strategies"
