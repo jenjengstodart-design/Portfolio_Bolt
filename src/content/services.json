@@ -1,0 +1,108 @@
+{
+  "services": [
+    {
+      "id": "innovation-management",
+      "title": "Innovation Management",
+      "icon": "Lightbulb",
+      "shortDescription": "Navigate complexity with strategic foresight and agile innovation design",
+      "fullDescription": "I help organisations build innovation capabilities that drive sustainable growth. From setting up innovation functions to coaching C-suite leaders on building innovative companies, I bring structure to complexity.",
+      "whoItsFor": [
+        "C-suite leaders building innovation capabilities",
+        "Scale-ups needing structured innovation processes",
+        "Enterprises transforming legacy operations"
+      ],
+      "whatsIncluded": [
+        "Innovation function design and setup",
+        "C-suite coaching and advisory",
+        "Innovation process development",
+        "Team capability building",
+        "Strategic foresight and trend analysis"
+      ],
+      "deliverables": [
+        "Innovation operating model",
+        "Innovation playbooks and toolkits",
+        "Capability development programmes",
+        "Strategic roadmaps"
+      ],
+      "relatedProjects": ["mars-ai-strategy", "williamhill-guild"]
+    },
+    {
+      "id": "human-centred-design",
+      "title": "Human-Centred Design",
+      "icon": "Users",
+      "shortDescription": "Create desirable products and services through design sprints and validation",
+      "fullDescription": "I blend research, design thinking, and rapid prototyping to create experiences that people actually want. User research, journey mapping, and experience optimization are at the core of my approach.",
+      "whoItsFor": [
+        "Product teams validating new concepts",
+        "Service organisations redesigning experiences",
+        "Companies solving complex customer problems"
+      ],
+      "whatsIncluded": [
+        "User research and persona development",
+        "Customer journey mapping",
+        "Design sprints and workshops",
+        "Rapid prototyping and testing",
+        "Experience optimization"
+      ],
+      "deliverables": [
+        "User research insights",
+        "Journey maps and service blueprints",
+        "Tested prototypes",
+        "Implementation roadmaps"
+      ],
+      "relatedProjects": ["mars-onboarding", "waitrose-regeneration", "channel4-sprint"]
+    },
+    {
+      "id": "transformation-strategy",
+      "title": "Transformation Strategy",
+      "icon": "TrendingUp",
+      "shortDescription": "Align stakeholders and accelerate time-to-value for future-ready growth",
+      "fullDescription": "I guide organisations through complex transformations—from operating model redesign to digital transformation. My focus is on aligning stakeholders, building internal capability, and delivering measurable outcomes.",
+      "whoItsFor": [
+        "Organisations undergoing digital transformation",
+        "Companies redesigning operating models",
+        "Leadership teams driving strategic change"
+      ],
+      "whatsIncluded": [
+        "Operating model design",
+        "Organisational design and restructuring",
+        "Change management programmes",
+        "Stakeholder alignment workshops",
+        "Implementation support"
+      ],
+      "deliverables": [
+        "Target operating model blueprints",
+        "Organisational design frameworks",
+        "Change management programmes",
+        "Implementation roadmaps"
+      ],
+      "relatedProjects": ["npl-operating-model", "xyla-product-model"]
+    },
+    {
+      "id": "ai-capability-building",
+      "title": "AI Capability Building",
+      "icon": "Sparkles",
+      "shortDescription": "Build AI capabilities that enhance productivity and unlock new value",
+      "fullDescription": "I help organisations navigate the AI landscape—from AI strategy development to hands-on capability building. My approach demystifies AI and enables teams to use it as a collaborative partner, not just a tool.",
+      "whoItsFor": [
+        "Organisations building AI capabilities",
+        "Teams wanting to integrate AI into workflows",
+        "Leaders developing AI strategies"
+      ],
+      "whatsIncluded": [
+        "AI discovery and use case identification",
+        "AI strategy and roadmap development",
+        "Team training and hackathons",
+        "Workflow design and automation",
+        "AI tool selection and implementation"
+      ],
+      "deliverables": [
+        "AI strategy and roadmaps",
+        "Prioritised use case backlogs",
+        "Training programmes and playbooks",
+        "Implemented workflows and tools"
+      ],
+      "relatedProjects": ["mars-ai-strategy", "miro-partnership", "kingston-hackathon"]
+    }
+  ]
+}

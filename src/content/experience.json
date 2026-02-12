@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "company": "Magnetic",
+      "title": "Management Consultant",
+      "startDate": "Feb 2022",
+      "endDate": "Nov 2024",
+      "achievements": [
+        "Delivered and supported 24 strategic projects, bringing in £700K-£1M/year in follow-on work (annual company revenue: £6-8M)",
+        "Spearheaded new propositions including Product Operating Model thought leadership and Target Operating Model design methodologies",
+        "Championed AI work, strategic partnerships, and built internal AI tools",
+        "Developed partnerships with Miro and System Innovation"
+      ],
+      "keyProjects": [
+        "Mars AI Strategy - Mission 98.5",
+        "National Physical Laboratory - Target Operating Model & Organisation Design",
+        "Acacium/Xyla Healthcare - Product Operating Model",
+        "Channel 4 Innovation Sprints",
+        "William Hill/Guild Esports Partnership Exploration"
+      ]
+    }
+  ],
+  "volunteerWork": [
+    {
+      "organization": "The 30 Minute - University of Planning",
+      "role": "Mentor",
+      "duration": "Dec 2020 - Present",
+      "description": "Bi-weekly 30-minute mentoring sessions connecting mentors and mentees"
+    },
+    {
+      "organization": "Like Minded Females (LMF Network) CIC",
+      "role": "Mentor",
+      "duration": "Jan 2021 - Feb 2022",
+      "description": "Empowering womxn and minoritised groups into tech, entrepreneurship & digital"
+    }
+  ]
+}

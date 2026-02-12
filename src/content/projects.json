@@ -1,0 +1,171 @@
+{
+  "categories": [
+    {
+      "name": "Experience Design",
+      "projects": [
+        {
+          "id": "mars-onboarding",
+          "title": "Mars Inc. - Reimagine Mars Associates Onboarding Experience",
+          "client": "Mars Inc.",
+          "industry": "FMCG / Manufacturing",
+          "publicChallenge": "Strategic oversight and support across the end-to-end of discovery and define to understand drivers of high attrition across global manufacturing facilities and then the design and test of differentiated onboarding experiences for office and shop-floor employees.",
+          "privateChallenge": "The associate attrition rate, especially on the shopfloor, was disrupting workflows and straining manufacturing resources. The company was treating the symptom, not the cause. No one had asked what would make new associates want to stay—or recognized that office employees and shop-floor workers faced completely different pain points.",
+          "approach": "We mapped the existing onboarding journeys for different Associate types, then designed and tested onboarding experience prototypes—from physical welcome boxes to digital alerts and communities to accelerate and deepen connections of new hires to their teams. We piloted an end-to-end onboarding journey in one region of the snacking business, measured uptake, and iterated based on what worked.",
+          "publicOutcome": "The approach became a replicable framework across several Mars Business Units.",
+          "privateOutcome": "Global HR adopted the framework across other divisions with retention challenges. The work revealed a hidden driver of attrition—unclear promotion paths—prompting several departments to clarify career progression for frontline employees.",
+          "methods": ["Experience Design", "Journey Mapping", "Prototyping", "Pilot Testing"],
+          "metrics": "Replicable blueprint adopted across multiple Mars divisions",
+          "featured": true,
+          "image": "/images/projects/mars-onboarding.jpg"
+        },
+        {
+          "id": "waitrose-regeneration",
+          "title": "Waitrose - Customer Shopping Diagnostic During Store Retrofits",
+          "client": "Waitrose",
+          "industry": "Retail",
+          "publicChallenge": "Led a customer shopping diagnostic to minimise shopping disruptions during store retrofits and developed a series of interventions to drive traffic during and post store retrofit.",
+          "privateChallenge": "Shopper footfall had declined since the start of a large-scale store regeneration programme. How might we understand and develop solutions to mitigate customer disruption and identify ways to ensure growth opportunities.",
+          "approach": "Conducted research across 10 stores through interviews and collaboration workshops. The goal was to identify the critical moments in the customer journey where the regeneration created either friction or opportunity. I then developed an intervention category list and rigorous measurement framework.",
+          "publicOutcome": "Developed interventions to drive traffic during and post-retrofit",
+          "privateOutcome": "Developed and built an improvement programme positioned to deliver £2–4M incremental benefit in 1 year. Created a replicable methodology for future estate regenerations, shifting the narrative from 'mitigation' to 'growth opportunity.'",
+          "methods": ["Customer Research", "Journey Mapping", "Intervention Design", "Measurement Framework"],
+          "metrics": "£2-4M projected incremental benefit",
+          "featured": true,
+          "image": "/images/projects/waitrose.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Operating Model Design",
+      "projects": [
+        {
+          "id": "npl-operating-model",
+          "title": "National Physical Laboratory - Target Operating Model & Organisation Design",
+          "client": "National Physical Laboratory",
+          "industry": "Government / Science",
+          "publicChallenge": "Strategic lead and management of end-to-end programmes spanning Target Operating Model redesign, organisational design, and change management workstreams.",
+          "privateChallenge": "The organization knew it needed new ways of working, a new mindset, and a restructured organization. What it lacked was clarity. There were too many possible starting points, no shared picture of the future state, and no roadmap for getting there.",
+          "approach": "We started by clarifying the problem before jumping to solutions. Working with leadership, we developed an initial high-level organization design and a visual structural blueprint showing how the institution could evolve. We then mapped out a Change Management programme and equipped internal teams with the tools, insights, and confidence to implement the new operating model themselves.",
+          "publicOutcome": "New target operating model and organisation design blueprint for strategic transformation",
+          "privateOutcome": "Leadership aligned around a clear structural blueprint, replacing ambiguity with a shared picture of the future organization. A Change Management programme was established with internal capability to drive implementation—not dependent on external consultants.",
+          "methods": ["Operating Model Design", "Organisational Design", "Change Management", "Leadership Workshops"],
+          "metrics": "Organisation-wide transformation blueprint implemented",
+          "featured": true,
+          "image": "/images/projects/npl.jpg"
+        },
+        {
+          "id": "xyla-product-model",
+          "title": "Acacium / Xyla Healthcare - Product Operating Model & Organisation Structure",
+          "client": "Acacium / Xyla Healthcare",
+          "industry": "Healthcare / Digital Health",
+          "publicChallenge": "Led a diagnostic across the product organisation on the Weightloss app and Mental Healthcare app to understand why delivery was slow and teams were fatigued. Defined a new product operating model and organisation structure to enable sustainable delivery.",
+          "privateChallenge": "Xyla had developed apps for NHS wellbeing and weight-loss. The apps were successful but they were struggling with slow product development, fatigued teams, and mounting user complaints. The development process—waterfall, service-based—couldn't keep pace with user needs.",
+          "approach": "We ran an 8-week diagnostic sprint across the product organization, interviewing across hierarchy levels and product groups to understand where things were actually breaking down. We proposed a new product operating model and organization structure designed to really understand customer problems, accelerate feature delivery while reducing the friction that was exhausting teams.",
+          "publicOutcome": "New product operating model enabling faster, sustainable delivery",
+          "privateOutcome": "A new product operating model defined, replacing the waterfall approach with a structure built for speed and collaboration. A path to reducing team fatigue was created, with structural changes designed to make delivery sustainable. The attrition rate slowed down. Stakeholders then asked us to stay on to help develop a product vision across the three divisions.",
+          "methods": ["Diagnostic Sprint", "Product Operating Model", "Organisation Design", "Stakeholder Interviews"],
+          "metrics": "Reduced team attrition, accelerated delivery",
+          "featured": true,
+          "image": "/images/projects/xyla.jpg"
+        }
+      ]
+    },
+    {
+      "name": "AI Digital Discovery & Design",
+      "projects": [
+        {
+          "id": "mars-ai-strategy",
+          "title": "Mars Pet Nutrition - AI Strategy (Mission 98.5)",
+          "client": "Mars Petcare Europe",
+          "industry": "FMCG / Pet Nutrition",
+          "publicChallenge": "Reframed an IT-led AI initiative as a business-centric transformation opportunity. The supply chain team had broad ambition but lacked a prioritised roadmap; the brief uncovered the highest-impact AI use cases and then built organisational alignment.",
+          "privateChallenge": "The team believed that getting the right people in a room would naturally produce the right AI applications. But a long list of AI use cases isn't a strategy. Without grounding in actual business pain points and strategic priorities, they'd end up with shiny ideas that went nowhere.",
+          "approach": "We reframed the entire exercise. Instead of starting with 'what can AI do?', we started with 'what's actually causing pain?' We mapped the supply chain team's pain points and their customers' friction, then identified where AI could specifically eliminate those problems. We compiled the output into a narrative for the Petcare C-suite, connecting each potential investment to strategic outcomes—pitched 'Mission 98.5' (98.5% Customer Service Level by 2027) as the unifying North Star.",
+          "publicOutcome": "Comprehensive AI strategy and implementation roadmap for Mission 98.5",
+          "privateOutcome": "Three high-impact AI application areas identified with clear business cases. The identified AI use case focus themes—Demand Alignment, Smart Mitigation Engine, Automated Data-surfacing—and mapped implementation sequence. This unlocked alignment across previously siloed markets. A backlog of additional use cases captured for future development. A replicable playbook created for defining AI use cases.",
+          "methods": ["AI Strategy", "Pain Point Mapping", "Use Case Prioritisation", "Stakeholder Workshops", "Strategic Roadmapping"],
+          "metrics": "3 prioritised AI applications, multi-market alignment achieved",
+          "featured": true,
+          "image": "/images/projects/mars-ai.jpg"
+        }
+      ]
+    },
+    {
+      "name": "AI Capability Building",
+      "projects": [
+        {
+          "id": "miro-partnership",
+          "title": "Miro Partnership - AI-Amplified Design Thinking",
+          "client": "Miro",
+          "industry": "Technology / SaaS",
+          "publicChallenge": "Partnered with Miro to design and deliver an event demonstrating how AI amplifies design thinking workflows. 150 attendees experienced practical applications from both consultant and designer perspectives.",
+          "privateChallenge": "With AI capabilities expanding rapidly, Miro wanted to demonstrate how AI could enhance productivity and quality of work for their user base. But the conversation around AI was noisy and abstract. They needed a concrete, practical showcase—proof that AI and design thinking together could deliver more than either alone.",
+          "approach": "We partnered to design and deliver a program showing AI in action from two angles: the consultant's perspective and the designer's perspective. This wasn't theoretical—we demonstrated real workflows, real tools, real outputs. We coordinated closely with the platform team to develop the event content and delivered it as both a live session and a webinar for broader reach.",
+          "publicOutcome": "150 attendees experienced AI-amplified design thinking workflows",
+          "privateOutcome": "Showcased practical Miro AI applications that users could immediately apply. Raised awareness to new ways of working, shifting perception of AI from threat or hype to a genuine amplifier of human-centered design. It was also the most attended webinar that Miro had partnered with an agency on.",
+          "methods": ["Workshop Design", "AI Tool Integration", "Live Demonstration", "Webinar Delivery"],
+          "metrics": "Most attended Miro partner webinar",
+          "links": [
+            "https://miro.com/blog/ai-is-redefining-innovation/",
+            "https://miro.com/webinars-transformation-tactics-4/"
+          ],
+          "featured": true,
+          "image": "/images/projects/miro.jpg"
+        },
+        {
+          "id": "kingston-hackathon",
+          "title": "Kingston University - MBA AI-Augmented Hackathon",
+          "client": "Kingston University",
+          "industry": "Education",
+          "publicChallenge": "Designed and facilitated a hackathon where MBA students used AI-augmented analysis to solve a complex merger scenario, experiencing AI as a collaborative partner for diagnosis, ideation, and prototyping.",
+          "privateChallenge": "The Department of Management at Kingston University wanted to help MBA students experience how AI could augment their analysis and problem-solving skills. But AI in education risked being either too abstract or too superficial—students needed to experience AI as a collaborative partner in real consulting scenarios.",
+          "approach": "We designed and ran a hackathon simulating real-world consulting at speed. Student teams tackled a complex merger scenario—integrating a fast, agile, innovation-driven company with a structured, hierarchical, compliance-focused one. AI tools (mainly Gemini Gems) were woven throughout: AI-assisted diagnosis to map cultural tensions, AI-supported ideation to generate interventions, and AI-powered prototyping to articulate leadership models.",
+          "publicOutcome": "MBA students experienced AI as a collaborative partner in complex problem-solving",
+          "privateOutcome": "Students experienced AI as co-creator, not shortcut—understanding how humans and AI collaborate to solve complex organizational problems. They learned AI workflows, including building synthetic personas for research and using AI to amplify critical thinking rather than replace it. They prototyped solutions for leadership models, cultural integration strategies, and change management programmes.",
+          "methods": ["Hackathon Design", "AI-Augmented Analysis", "Merger Simulation", "Team Facilitation"],
+          "metrics": "Successfully demonstrated AI-human collaboration in education",
+          "links": [
+            "https://www.linkedin.com/posts/chenchupadidam_rethinkingwork-peopleplacework-magnetichackathon-activity-7401185950581809152"
+          ],
+          "featured": true,
+          "image": "/images/projects/kingston.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Service & Product Design",
+      "projects": [
+        {
+          "id": "channel4-sprint",
+          "title": "Channel 4 / All4 - Compressed Innovation Sprint",
+          "client": "Channel 4",
+          "industry": "Media / Broadcasting",
+          "publicChallenge": "Designed and implemented a compressed innovation sprint format for a digital division whose multi-disciplinary teams were too busy to collaborate. We overcame the time challenge by creating a 10-day, 1-hour-daily design sprint that became their standard playbook.",
+          "privateChallenge": "The digital team was advanced in innovation methodology but was unable to come together for multi-disciplinary collaboration as everyone's time was occupied by day-to-day demands. Good ideas stalled before they started. They needed a process that worked within real constraints.",
+          "approach": "We designed a 10-day sprint built around 1-hour daily sessions, making it possible for Marketing Ops, Data Ops, and Client Acquisition teams to participate without blocking out entire days. The compressed format forced focus: real-time problem solving, no sprawling workshops. We facilitated the sprints live, keeping momentum high and decisions moving.",
+          "publicOutcome": "10-day, 1-hour-daily design sprint became their standard playbook for bringing squads together",
+          "privateOutcome": "Ten cohorts completed the sprint process, with several ideas passing the CPO pitch test and moving to implementation. The methodology became their standard playbook for running design sprints—a permanent capability, not a one-off intervention. We later adapted the approach to help them form squads rapidly.",
+          "methods": ["Design Sprint", "Compressed Sprint Format", "Multi-disciplinary Facilitation", "Rapid Prototyping"],
+          "metrics": "10 cohorts completed, multiple ideas implemented",
+          "featured": true,
+          "image": "/images/projects/channel4.jpg"
+        },
+        {
+          "id": "williamhill-guild",
+          "title": "William Hill / Guild Esports - Partnership Exploration",
+          "client": "William Hill & Guild Esports",
+          "industry": "Gaming / Esports",
+          "publicChallenge": "Led a joint client and agency, multi-disciplinary team to explore value propositions for a potential esports partnership, identifying growth areas beyond traditional betting. The work opened William Hill leadership's eyes to design thinking methodology.",
+          "privateChallenge": "William Hill was exploring growth beyond its core business. The company wanted to explore whether an esports partnership could open new growth areas outside traditional betting. But the real challenge was cultural, not strategic. Leadership doubted design thinking could deliver meaningful results.",
+          "approach": "We used lean design thinking to explore the white space between betting and esports. We led research interviews, then ran a 3-day solution sprint with a multi-disciplinary team spanning Marketing, CRM, Legal, and other departments. The sprint generated experiments ranging from digital apps to e-gaming setups in betting shops, and identified empty retail locations as potential grassroots esports venues.",
+          "publicOutcome": "Led to the creation of an internal Innovation Playbook to guide internal innovation capability",
+          "privateOutcome": "The C-suite and senior leadership acknowledged design thinking as a tool for innovation. Two participants independently adopted design thinking in their own departments. The company invested to sustain innovation capability—asked us to co-develop an Innovation Playbook, to help set up an Innovation Team, and coach the team to develop a new offering for ultra-high-net-worth customers.",
+          "methods": ["Design Thinking", "Solution Sprint", "Multi-disciplinary Collaboration", "Value Proposition Design"],
+          "metrics": "Innovation Team established, Innovation Playbook created",
+          "featured": true,
+          "image": "/images/projects/williamhill.jpg"
+        }
+      ]
+    }
+  ]
+}

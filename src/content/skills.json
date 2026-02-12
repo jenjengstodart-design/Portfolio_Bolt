@@ -1,0 +1,97 @@
+{
+  "keySkillCategories": [
+    {
+      "category": "AI Capability Building",
+      "rating": "Moderate",
+      "description": "Developing AI strategies, internal AI tools, and AI-augmented workflows",
+      "evidence": [
+        "AI & Agentic Workflows certification from Maven",
+        "Active contributor at Women Defining AI",
+        "Experience with Claude Code, Antigravity, TypingMind, Cassidy, Gumloop",
+        "Vibe coding with Lovable and Bolt"
+      ]
+    },
+    {
+      "category": "AI/Digital Discovery & Design",
+      "rating": "Strong",
+      "description": "Leading collaborative AI and digital transformation initiatives",
+      "evidence": [
+        "Mars Pet Nutrition AI Strategy (Mission 98.5)",
+        "Multiple digital discovery projects across sectors",
+        "Developing workflows and business strategies for AI implementation"
+      ]
+    },
+    {
+      "category": "Experience Design",
+      "rating": "Strong",
+      "description": "Creating human-centred product and service experiences",
+      "evidence": [
+        "Mars Associates onboarding redesign",
+        "Waitrose customer shopping diagnostic",
+        "Leading teams across product and services in agency and in-house settings"
+      ]
+    },
+    {
+      "category": "Operating Model Design",
+      "rating": "Strong",
+      "description": "Designing organizational structures and operating models",
+      "evidence": [
+        "National Physical Laboratory Target Operating Model",
+        "Acacium/Xyla Healthcare product operating model redesign",
+        "Collaborative approach vs. traditional consulting playbook"
+      ]
+    },
+    {
+      "category": "Service & Product Design",
+      "rating": "Strong",
+      "description": "Design sprints, hackathons, and rapid prototyping",
+      "evidence": [
+        "Channel 4 innovation sprint format",
+        "William Hill/Guild Esports design sprint",
+        "Designed and facilitated multiple hackathons"
+      ]
+    },
+    {
+      "category": "Leadership & Team Management",
+      "rating": "Strong",
+      "description": "Leading teams with high standards and mentorship",
+      "evidence": [
+        "10+ years in leadership roles",
+        "Team members promoted immediately after projects",
+        "Known for energy, knowledge sharing, and high expectations"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "How To Scale A Business With AI & Agentic Workflows - Foundations",
+      "issuer": "Maven",
+      "year": 2024
+    },
+    {
+      "name": "Strategic Foresight",
+      "issuer": "Copenhagen Institute for Futures Studies",
+      "year": 2023
+    },
+    {
+      "name": "Business Innovation",
+      "issuer": "IDEO U",
+      "year": 2022
+    },
+    {
+      "name": "Designing Strategy",
+      "issuer": "IDEO U",
+      "year": 2022
+    },
+    {
+      "name": "Design Sprint Masterclass",
+      "issuer": "AJ&Smart GmbH",
+      "year": 2021
+    },
+    {
+      "name": "Postgraduate Diploma in Digital Marketing",
+      "issuer": "The Institute of Direct and Digital Marketing (IDM)",
+      "year": 2019
+    }
+  ]
+}
