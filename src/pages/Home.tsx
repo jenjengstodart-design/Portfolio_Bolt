@@ -55,7 +55,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-h1 font-bold mb-4">What I Do</h2>
+            <h2 className="text-h1 font-bold mb-4">My Expertise</h2>
             <p className="text-body text-text-light max-w-2xl mx-auto">
               AI-enhanced, human-centred approach to innovation and transformation
             </p>
