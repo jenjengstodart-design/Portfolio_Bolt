@@ -234,7 +234,7 @@ export default function Contact() {
               </div>
 
               <div className="bg-accent-red/5 p-6 rounded-lg border-l-4 border-accent-red">
-                <h3 className="text-h3 font-bold mb-3">What I'm Looking For</h3>
+                <h3 className="text-h3 font-bold mb-3">I can help you if you're looking for</h3>
                 <ul className="space-y-2">
                   {profileData.lookingFor.slice(0, 3).map((item) => (
                     <li key={item} className="text-body text-text-secondary flex items-start gap-2">

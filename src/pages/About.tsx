@@ -76,7 +76,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="mb-16"
             >
-              <h2 className="text-h1 font-bold mb-6">What I'm Looking For</h2>
+              <h2 className="text-h1 font-bold mb-6">I can help you if you're looking for</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-h3 font-bold mb-4 text-accent-red">Seeking</h3>
