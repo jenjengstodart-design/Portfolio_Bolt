@@ -190,13 +190,13 @@ export default function Contact() {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:contact@jenjeng.com"
+                    href={`mailto:${profileData.email}`}
                     className="flex items-start gap-4 p-4 bg-off-white rounded-lg hover:bg-nav-active transition-colors"
                   >
                     <Mail className="text-accent-red flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="text-body font-medium">Email</p>
-                      <p className="text-body text-text-light">contact@jenjeng.com</p>
+                      <p className="text-body text-text-light">{profileData.email}</p>
                     </div>
                   </a>
 
