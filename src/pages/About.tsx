@@ -4,6 +4,7 @@ import { Linkedin, Download } from 'lucide-react';
 import profileData from '../content/profile.json';
 import skillsData from '../content/skills.json';
 import experienceData from '../content/experience.json';
+import { downloadCV } from '../lib/storage';
 
 export default function About() {
   const getRatingColor = (rating: string) => {
@@ -267,7 +268,10 @@ export default function About() {
               <Link to="/contact" className="bg-white text-accent-red px-10 py-3.5 rounded-full font-bold text-small hover:bg-off-white transition-colors inline-flex items-center gap-2">
                 Book a Call
               </Link>
-              <button className="bg-transparent text-white border-2 border-white px-9 py-3 rounded-full font-semibold text-small hover:bg-white hover:text-accent-red transition-colors inline-flex items-center gap-2">
+              <button
+                onClick={downloadCV}
+                className="bg-transparent text-white border-2 border-white px-9 py-3 rounded-full font-semibold text-small hover:bg-white hover:text-accent-red transition-colors inline-flex items-center gap-2"
+              >
                 <Download size={20} />
                 Download CV
               </button>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail } from 'lucide-react';
+import profileData from '../content/profile.json';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -38,7 +39,7 @@ export default function Footer() {
             <h4 className="text-body font-semibold mb-4 text-white">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.linkedin.com/in/jenjeng/"
+                href={profileData.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-full hover:bg-accent-red transition-colors"
@@ -47,7 +48,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contact@jenjeng.com"
+                href={`mailto:${profileData.email}`}
                 className="p-2 bg-white/10 rounded-full hover:bg-accent-red transition-colors"
                 aria-label="Email"
               >

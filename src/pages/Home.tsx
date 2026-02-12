@@ -4,6 +4,7 @@ import { Lightbulb, Users, TrendingUp, Sparkles, ArrowRight } from 'lucide-react
 import profileData from '../content/profile.json';
 import servicesData from '../content/services.json';
 import projectsData from '../content/projects.json';
+import { downloadCV } from '../lib/storage';
 
 const iconMap: Record<string, React.ElementType> = {
   Lightbulb,
@@ -38,7 +39,7 @@ export default function Home() {
               <Link to="/work" className="btn-primary">
                 View My Work
               </Link>
-              <button className="btn-secondary">
+              <button onClick={downloadCV} className="btn-secondary">
                 Download CV
               </button>
             </div>
