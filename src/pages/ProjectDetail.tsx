@@ -62,9 +62,11 @@ export default function ProjectDetail() {
             </div>
 
             <div className="bg-nav-active h-96 rounded-2xl mb-12 overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-accent-red/20 to-accent-red/5 flex items-center justify-center text-text-light">
-                <span className="text-body">Project Image</span>
-              </div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>
