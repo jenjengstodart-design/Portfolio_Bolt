@@ -32,7 +32,7 @@ export default function Home() {
               <div className="flex-shrink-0">
                 <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="/images/Screenshot_2026-02-15_at_23.06.10.png"
+                    src="/images/Screenshot_2026-02-15_at_22.57.59.png"
                     alt="Jen's portrait"
                     className="w-full h-full object-cover"
                   />
