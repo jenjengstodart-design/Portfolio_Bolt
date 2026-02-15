@@ -42,6 +42,11 @@ export default function Contact() {
       reset();
     } catch (error) {
       console.error('Error submitting form:', error);
+
+      const subject = encodeURIComponent(`${data.inquiryType}: Message from ${data.name}`);
+      const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'N/A'}\nInquiry Type: ${data.inquiryType}\n\nMessage:\n${data.message}`);
+      window.location.href = `mailto:${profileData.email}?subject=${subject}&body=${body}`;
+
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -60,7 +65,7 @@ export default function Contact() {
           >
             <h1 className="text-hero font-bold mb-6">Let's Connect</h1>
             <p className="text-h3 text-text-light">
-              Ready to discuss how I can help your organization thrive? Get in touch.
+              Ready to discuss how I can help your organisation thrive? Get in touch.
             </p>
           </motion.div>
 
@@ -173,7 +178,7 @@ export default function Contact() {
 
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 text-red-800 rounded-lg text-body">
-                    There was an error sending your message. Please try again or contact me directly.
+                    Opening your email client to send the message directly...
                   </div>
                 )}
               </form>

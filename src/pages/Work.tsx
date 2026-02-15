@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import projectsData from '../content/projects.json';
+import ClientLogos from '../components/ClientLogos';
 
 export default function Work() {
   const [activeCategory, setActiveCategory] = useState<string>('All Projects');
@@ -25,10 +26,7 @@ export default function Work() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-hero font-bold mb-6">My Work</h1>
-            <p className="text-h3 text-text-light max-w-3xl mx-auto">
-              Proven results across industries and transformation types
-            </p>
+            <h1 className="text-hero font-bold">My Work</h1>
           </motion.div>
         </div>
       </section>
@@ -113,6 +111,8 @@ export default function Work() {
         </div>
       </section>
 
+      <ClientLogos />
+
       <section className="section-padding bg-accent-red text-white">
         <div className="section-container text-center">
           <motion.div
@@ -123,7 +123,7 @@ export default function Work() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Interested in Working Together?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how I can help your organization achieve similar results.
+              Let's discuss how I can help your organisation achieve similar results.
             </p>
             <Link
               to="/contact"

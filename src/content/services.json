@@ -22,7 +22,7 @@
         "Innovation operating model",
         "Innovation playbooks and toolkits",
         "Capability development programmes",
-        "Strategic roadmaps"
+        "Strategic prioritisation"
       ],
       "relatedProjects": ["mars-ai-strategy", "williamhill-guild"]
     },
@@ -31,7 +31,7 @@
       "title": "Human-Centred Design",
       "icon": "Users",
       "shortDescription": "Create desirable products and services through design sprints and validation",
-      "fullDescription": "I blend research, design thinking, and rapid prototyping to create experiences that people actually want. User research, journey mapping, and experience optimization are at the core of my approach.",
+      "fullDescription": "I blend research, design thinking, and rapid prototyping to create experiences that people actually want. User research, journey mapping, and experience optimisation are at the core of my approach.",
       "whenYouNeedIt": [
         "Product teams validating new concepts",
         "Service organisations redesigning experiences",
@@ -42,13 +42,13 @@
         "Customer journey mapping",
         "Design sprints and workshops",
         "Rapid prototyping and testing",
-        "Experience optimization"
+        "Experience optimisation"
       ],
       "deliverables": [
         "User research insights",
         "Journey maps and service blueprints",
         "Tested prototypes",
-        "Implementation roadmaps"
+        "Implementation prioritisations"
       ],
       "relatedProjects": ["mars-onboarding", "waitrose-regeneration", "channel4-sprint"]
     },
@@ -74,7 +74,7 @@
         "Target operating model blueprints",
         "Organisational design frameworks",
         "Change management programmes",
-        "Implementation roadmaps"
+        "Implementation prioritisations"
       ],
       "relatedProjects": ["npl-operating-model", "xyla-product-model"]
     },
@@ -83,7 +83,7 @@
       "title": "AI Capability Building",
       "icon": "Sparkles",
       "shortDescription": "Build AI capabilities that enhance productivity and unlock new value",
-      "fullDescription": "I help organisations navigate the AI landscape—from AI strategy development to hands-on capability building. My approach demystifies AI and enables teams to use it as a collaborative partner, not just a tool.",
+      "fullDescription": "I help organisations navigate the AI landscape—from AI use case discovery development to hands-on capability building. My approach demystifies AI and enables teams to use it as a collaborative partner, not just a tool.",
       "whenYouNeedIt": [
         "Organisations building AI capabilities",
         "Teams wanting to integrate AI into workflows",
@@ -91,13 +91,13 @@
       ],
       "whatsIncluded": [
         "AI discovery and use case identification",
-        "AI strategy and roadmap development",
+        "AI use case discovery and prioritisation development",
         "Team training and hackathons",
         "Workflow design and automation",
         "AI tool selection and implementation"
       ],
       "deliverables": [
-        "AI strategy and roadmaps",
+        "AI use case discovery and prioritisations",
         "Prioritised use case backlogs",
         "Training programmes and playbooks",
         "Implemented workflows and tools"

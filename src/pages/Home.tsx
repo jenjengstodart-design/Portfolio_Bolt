@@ -5,6 +5,7 @@ import profileData from '../content/profile.json';
 import servicesData from '../content/services.json';
 import projectsData from '../content/projects.json';
 import { downloadCV } from '../lib/storage';
+import ClientLogos from '../components/ClientLogos';
 
 const iconMap: Record<string, React.ElementType> = {
   Lightbulb,
@@ -28,10 +29,19 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl"
           >
-            <h1 className="text-hero font-bold mb-6">Innovation Partner</h1>
-            <p className="text-h3 text-text-light mb-8 font-medium">
-              {profileData.currentTitle}
-            </p>
+            <div className="flex items-start gap-8 mb-8">
+              <div className="flex-shrink-0">
+                <div className="w-32 h-32 rounded-2xl bg-accent-red flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-4xl">JJ</span>
+                </div>
+              </div>
+              <div className="flex-grow">
+                <h1 className="text-hero font-bold mb-4">Hi, I'm Jen.</h1>
+                <p className="text-h3 text-text-light font-medium">
+                  {profileData.currentTitle}
+                </p>
+              </div>
+            </div>
             <p className="text-body text-text-secondary mb-10 max-w-3xl leading-relaxed">
               {profileData.elevatorPitch}
             </p>
@@ -148,7 +158,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-off-white">
+      <ClientLogos />
+
+      <section className="section-padding bg-white">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -184,7 +196,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm"
+                className="bg-off-white p-8 rounded-2xl shadow-sm"
               >
                 <h3 className="text-h3 font-bold mb-4">{pillar.title}</h3>
                 <ul className="space-y-2">

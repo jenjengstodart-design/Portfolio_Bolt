@@ -47,13 +47,13 @@ export default function Footer() {
               >
                 <Linkedin size={20} />
               </a>
-              <a
-                href={`mailto:${profileData.email}`}
+              <Link
+                to="/contact"
                 className="p-2 bg-white/10 rounded-full hover:bg-accent-red transition-colors"
-                aria-label="Email"
+                aria-label="Contact"
               >
                 <Mail size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
