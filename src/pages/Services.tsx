@@ -146,9 +146,11 @@ export default function Services() {
                         className="block group"
                       >
                         <div className="bg-nav-active h-40 rounded-lg mb-4 overflow-hidden">
-                          <div className="w-full h-full bg-gradient-to-br from-accent-red/20 to-accent-red/5 flex items-center justify-center text-text-light group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-small">Project Image</span>
-                          </div>
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
                         </div>
                         <h4 className="text-body font-bold mb-1 group-hover:text-accent-red transition-colors">
                           {project.title}
