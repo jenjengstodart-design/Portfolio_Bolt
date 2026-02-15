@@ -31,7 +31,7 @@
           "methods": ["Customer Research", "Journey Mapping", "Intervention Design", "Measurement Framework"],
           "metrics": "£2-4M projected incremental benefit",
           "featured": true,
-          "image": "/images/projects/waitrose.jpg"
+          "image": "/images/projects/waitrose.png"
         }
       ]
     },
@@ -51,7 +51,7 @@
           "methods": ["Operating Model Design", "Organisational Design", "Change Management", "Leadership Workshops"],
           "metrics": "Organisation-wide transformation blueprint implemented",
           "featured": true,
-          "image": "/images/projects/npl.jpg"
+          "image": "/images/projects/npl.png"
         },
         {
           "id": "xyla-product-model",
