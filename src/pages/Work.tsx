@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import projectsData from '../content/projects.json';
-import ClientLogos from '../components/ClientLogos';
 
 export default function Work() {
   const [activeCategory, setActiveCategory] = useState<string>('All Projects');
@@ -110,8 +109,6 @@ export default function Work() {
           )}
         </div>
       </section>
-
-      <ClientLogos />
 
       <section className="section-padding bg-accent-red text-white">
         <div className="section-container text-center">

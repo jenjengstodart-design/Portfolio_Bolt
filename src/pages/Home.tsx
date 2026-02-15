@@ -5,7 +5,6 @@ import profileData from '../content/profile.json';
 import servicesData from '../content/services.json';
 import projectsData from '../content/projects.json';
 import { downloadCV } from '../lib/storage';
-import ClientLogos from '../components/ClientLogos';
 
 const iconMap: Record<string, React.ElementType> = {
   Lightbulb,
@@ -157,8 +156,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <ClientLogos />
 
       <section className="section-padding bg-white">
         <div className="section-container">
