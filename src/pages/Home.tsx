@@ -30,8 +30,12 @@ export default function Home() {
           >
             <div className="flex items-start gap-8 mb-8">
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 rounded-2xl bg-accent-red flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-4xl">JJ</span>
+                <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="/images/Screenshot_2026-02-15_at_23.06.10.png"
+                    alt="Jen's portrait"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="flex-grow">
