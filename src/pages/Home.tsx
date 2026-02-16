@@ -226,7 +226,7 @@ export default function Home() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Let's Work Together</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Ready to unlock growth and innovation? Let's discuss how I can help your organization thrive.
+              Let's discuss how I can help your organisation
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

@@ -213,7 +213,7 @@ export default function ProjectDetail() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Like What You See?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how I can help your organization achieve similar results.
+              Let's discuss how I can help your organisation
             </p>
             <Link
               to="/contact"

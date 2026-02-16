@@ -262,7 +262,7 @@ export default function About() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Want to Work Together?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how my experience and skills can help your organization.
+              Let's discuss how I can help your organisation
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="bg-white text-accent-red px-10 py-3.5 rounded-full font-bold text-small hover:bg-off-white transition-colors inline-flex items-center gap-2">

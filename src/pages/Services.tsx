@@ -178,7 +178,7 @@ export default function Services() {
           >
             <h2 className="text-h1 font-bold mb-4 text-white">Ready to Get Started?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how my expertise can help your organization achieve its goals.
+              Let's discuss how I can help your organisation
             </p>
             <Link
               to="/contact"
