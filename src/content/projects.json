@@ -16,7 +16,7 @@
           "methods": ["Experience Design", "Journey Mapping", "Prototyping", "Pilot Testing"],
           "metrics": "Replicable blueprint adopted across multiple Mars divisions",
           "featured": true,
-          "image": "/images/projects/mars-inc.png"
+          "image": "/images/projects/Mars-inc-reimage-mars.jpg"
         },
         {
           "id": "waitrose-regeneration",
@@ -31,7 +31,7 @@
           "methods": ["Customer Research", "Journey Mapping", "Intervention Design", "Measurement Framework"],
           "metrics": "£2-4M projected incremental benefit",
           "featured": true,
-          "image": "/images/projects/waitrose.png"
+          "image": "/images/projects/Waitrose-customer-shopping.jpeg"
         }
       ]
     },
@@ -51,7 +51,7 @@
           "methods": ["Operating Model Design", "Organisational Design", "Change Management", "Leadership Workshops"],
           "metrics": "Organisation-wide transformation blueprint implemented",
           "featured": true,
-          "image": "/images/projects/npl.png"
+          "image": "/images/projects/national-physical-laboratory.jpg"
         },
         {
           "id": "xyla-product-model",
@@ -86,7 +86,7 @@
           "methods": ["AI Use Case Discovery", "Pain Point Mapping", "Use Case Prioritisation", "Stakeholder Workshops", "Strategic Prioritisation"],
           "metrics": "3 prioritised AI applications, multi-market alignment achieved",
           "featured": true,
-          "image": "/images/projects/Screenshot_2026-02-15_at_23.24.51.png"
+          "image": "/images/projects/mars-pet-nutrition.webp"
         }
       ]
     },
@@ -110,7 +110,7 @@
             "https://miro.com/webinars-transformation-tactics-4/"
           ],
           "featured": true,
-          "image": "/images/projects/Screenshot_2026-02-15_at_23.22.17.png"
+          "image": "/images/projects/Co-creating_future-.png"
         },
         {
           "id": "kingston-hackathon",
@@ -128,7 +128,7 @@
             "https://www.linkedin.com/posts/chenchupadidam_rethinkingwork-peopleplacework-magnetichackathon-activity-7401185950581809152"
           ],
           "featured": true,
-          "image": "/images/projects/unknown.png"
+          "image": "/images/projects/kingston-university-MBA.jpeg"
         }
       ]
     },
@@ -148,7 +148,7 @@
           "methods": ["Design Sprint", "Compressed Sprint Format", "Multi-disciplinary Facilitation", "Rapid Prototyping"],
           "metrics": "10 cohorts completed, multiple ideas implemented",
           "featured": true,
-          "image": "/images/projects/Screenshot_2026-02-15_at_23.59.43.png"
+          "image": "/images/projects/channel4.png"
         },
         {
           "id": "williamhill-guild",
