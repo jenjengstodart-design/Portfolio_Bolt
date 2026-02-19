@@ -39,6 +39,10 @@
     {
       "question": "What do you NOT like?",
       "answer": "Innovation theatre -I can't stand performative innovation that doesn't lead to real change or impact."
+    },
+    {
+      "question": "What is your daily rate?",
+      "answer": "My day rate is £800 - £1,200 depending on the type of work. For context, when working through a consultancy, clients are typically charged £2,000 - £5,000 per day. I'd rather have a proper conversation about what you need and give you an accurate quote - rates vary based on scope, duration and the nature of the engagement. Worth a 30-minute call to figure out what actually makes sense for your project."
     }
   ],
   "aiBehaviorRules": [

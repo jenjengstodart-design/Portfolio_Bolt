@@ -9,7 +9,11 @@
   "location": "United Kingdom",
   "remote": "Flexible",
   "availability": "Part-time now · Full-time from April 2026",
-  "salaryExpectation": "£100k+ or day rate",
+  "compensation": {
+    "salaryExpectation": "Open to discussion - happy to have a call to explore what works for both sides",
+    "dailyRate": "£800 - £1,200 per day depending on the type of work. For a specific quote, let's have a conversation.",
+    "companyChargeOut": "When working through a consultancy, project rates typically ranged from £2,000 - £5,000 per day depending on the type of work and client. For current project-based pricing, I'd rather talk it through properly."
+  },
   "linkedIn": "https://www.linkedin.com/in/jenjeng/",
   "email": "jen.jengstodart@gmail.com",
   "github": "",
