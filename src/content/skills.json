@@ -2,13 +2,11 @@
   "keySkillCategories": [
     {
       "category": "AI Capability Building",
-      "rating": "Moderate",
+      "rating": "Strong",
       "description": "Developing AI strategies, internal AI tools, and AI-augmented workflows",
       "evidence": [
-        "AI & Agentic Workflows certification from Maven",
-        "Active contributor at Women Defining AI",
-        "Experience with Claude Code, Antigravity, TypingMind, Cassidy, Gumloop",
-        "Vibe coding with Lovable and Bolt"
+        "Partnered with Miro to design and deliver an event demonstrating AI workflows",
+        "Designed and facilitated a hackathon helping students use AI as a collaborative partner to solve a complex merger scenario"
       ]
     },
     {
@@ -62,36 +60,30 @@
       ]
     }
   ],
-  "certifications": [
+  "certificationGroups": [
     {
-      "name": "How To Scale A Business With AI & Agentic Workflows - Foundations",
-      "issuer": "Maven",
-      "year": 2024
+      "groupLabel": "2024–2026 | Continuing Education",
+      "items": [
+        { "name": "Master market-ready agentic AI workflows", "issuer": "Maven", "year": 2026 },
+        { "name": "How To Scale A Business With AI & Agentic Workflows — Foundations", "issuer": "Maven", "year": 2025 },
+        { "name": "Ethics of AI", "issuer": "London School of Economics (LSE)", "year": 2024 }
+      ]
     },
     {
-      "name": "Strategic Foresight",
-      "issuer": "Copenhagen Institute for Futures Studies",
-      "year": 2023
+      "groupLabel": "2019–2023 | Professional Certifications",
+      "items": [
+        { "name": "Strategic Foresight", "issuer": "Copenhagen Institute for Futures Studies", "year": 2023 },
+        { "name": "Business Innovation & Designing Strategy", "issuer": "IDEO U", "year": 2022 },
+        { "name": "Design Sprint Masterclass", "issuer": "AJ&Smart GmbH", "year": 2021 },
+        { "name": "Postgraduate Diploma in Digital Marketing", "issuer": "IDM", "year": 2019 }
+      ]
     },
     {
-      "name": "Business Innovation",
-      "issuer": "IDEO U",
-      "year": 2022
-    },
-    {
-      "name": "Designing Strategy",
-      "issuer": "IDEO U",
-      "year": 2022
-    },
-    {
-      "name": "Design Sprint Masterclass",
-      "issuer": "AJ&Smart GmbH",
-      "year": 2021
-    },
-    {
-      "name": "Postgraduate Diploma in Digital Marketing",
-      "issuer": "The Institute of Direct and Digital Marketing (IDM)",
-      "year": 2019
+      "groupLabel": "Education",
+      "items": [
+        { "name": "MBA", "issuer": "Manchester Business School", "year": 2004 },
+        { "name": "Bachelor of Applied Science", "issuer": "University of British Columbia (UBC)", "year": 1996 }
+      ]
     }
   ]
 }

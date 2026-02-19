@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
+import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Work from './pages/Work';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        <CookieConsent />
         <ChatWidget />
       </div>
     </Router>

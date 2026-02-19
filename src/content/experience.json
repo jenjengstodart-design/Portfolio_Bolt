@@ -2,14 +2,14 @@
   "jobs": [
     {
       "company": "Magnetic",
-      "title": "Management Consultant",
+      "title": "Managing Consultant",
       "startDate": "Feb 2022",
-      "endDate": "Nov 2024",
+      "endDate": "Nov 2025",
       "achievements": [
-        "Delivered and supported 24 strategic projects, bringing in £700K-£1M/year in follow-on work (annual company revenue: £6-8M)",
         "Spearheaded new propositions including Product Operating Model thought leadership and Target Operating Model design methodologies",
         "Championed AI work, strategic partnerships, and built internal AI tools",
-        "Developed partnerships with Miro and System Innovation"
+        "Developed partnerships with Miro and System Innovation",
+        "Delivered and supported 24 strategic projects, bringing in £700K-£1M/year in follow-on work (annual company revenue: £6-8M)"
       ],
       "keyProjects": [
         "Mars AI Use Case Discovery - Mission 98.5",
@@ -17,6 +17,86 @@
         "Acacium/Xyla Healthcare - Product Operating Model",
         "Channel 4 Innovation Sprints",
         "William Hill/Guild Esports Partnership Exploration"
+      ]
+    }
+  ],
+  "priorJobs": [
+    {
+      "sectionLabel": "Agency-side: 2016–2022",
+      "jobs": [
+        {
+          "company": "BIO",
+          "title": "Strategy & Insights Lead",
+          "achievements": [
+            "Led Strategy and UX research to reimagine an EY audit platform",
+            "Delivered clickable prototype of 'Hub and modules' for concept testing within 12 weeks — moving a complex compliance tool toward usability for clients and internal auditors"
+          ]
+        },
+        {
+          "company": "Nterative",
+          "title": "Head of Strategy",
+          "achievements": [
+            "Developed Event Experience Design framework and tools, implemented across the agency",
+            "Won accounts including Marriott Hotels, VMware and IBM — totalling approximately £1M"
+          ]
+        },
+        {
+          "company": "Momentum Worldwide (McCann)",
+          "title": "Strategy Director",
+          "achievements": [
+            "Led and won the PULZE pitch — a next-generation consumer product",
+            "Directed ethnography research in Japan, market sizing, and go-to-market strategy that informed a successful global launch"
+          ]
+        },
+        {
+          "company": "Zeta Global (eBay Enterprise)",
+          "title": "Senior Strategist, Planner",
+          "achievements": [
+            "Owned growth strategy for Shop Direct Group, the agency's largest account",
+            "Drove performance marketing transformation in email and content, building new revenue streams"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionLabel": "Client-side: 2004–2015",
+      "jobs": [
+        {
+          "company": "Marionnaud France",
+          "title": "Strategic Projects",
+          "context": "~1,000 stores, €1Bn turnover",
+          "achievements": [
+            "Developed the business transformation and turnaround programme that delivered €50M in cost savings over 12 months",
+            "Re-positioned business around skincare to drive customer engagement and growth — fundamentally shifting category strategy"
+          ]
+        },
+        {
+          "company": "John Lewis & Partners",
+          "title": "Product Manager",
+          "context": "~40 stores, £4Bn turnover",
+          "achievements": [
+            "Redesigned Personal Styling service proposition to unlock womenswear growth",
+            "Took concept from ideation through Board pitch and piloted at Oxford Flagship store — establishing proof of concept for chain rollout"
+          ]
+        },
+        {
+          "company": "Marks & Spencer",
+          "title": "Beauty Category Product Manager",
+          "context": "~950 UK stores, £10Bn turnover",
+          "achievements": [
+            "Researched and designed Virtual Makeover and Skincare Guided Selling to grow category penetration",
+            "Shifted customer demographic toward younger audiences"
+          ]
+        },
+        {
+          "company": "James Purdey & Sons",
+          "title": "Project Manager",
+          "context": "£11M turnover",
+          "achievements": [
+            "Developed CRM strategy for high-value customer base",
+            "Launched click-to-collect programme — achieved 20% footfall uplift in launch month and sustained uplift in website engagement"
+          ]
+        }
       ]
     }
   ],

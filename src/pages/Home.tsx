@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Lightbulb, Users, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { Lightbulb, Users, TrendingUp, Sparkles, ArrowRight, MessageCircle } from 'lucide-react';
 import profileData from '../content/profile.json';
 import servicesData from '../content/services.json';
 import projectsData from '../content/projects.json';
@@ -45,9 +45,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <p className="text-body text-text-secondary mb-10 max-w-3xl leading-relaxed">
+            <p className="text-body text-text-secondary mb-4 max-w-3xl leading-relaxed">
               {profileData.elevatorPitch}
             </p>
+            <button
+              onClick={() => window.dispatchEvent(new Event('openChat'))}
+              className="text-small text-accent-red font-semibold mb-8 hover:underline text-left flex items-center gap-1.5 transition-colors"
+            >
+              <MessageCircle size={15} />
+              Curious what I do? Ask my AI — it knows my work inside out
+            </button>
             <div className="flex flex-wrap gap-4">
               <Link to="/work" className="btn-primary">
                 View My Work
@@ -163,6 +170,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MY AI LAB SECTION — placeholder, ready to populate with real tools */}
+      <section className="section-padding bg-off-white">
+        <div className="section-container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <div className="flex items-end justify-between">
+              <div>
+                <h2 className="text-h1 font-bold mb-2">My AI Lab</h2>
+                <p className="text-body text-text-light max-w-2xl">
+                  Tools I've built using ChatGPT, Claude Code and Gemini — real AI, real use cases
+                </p>
+              </div>
+              {/* Uncomment when you have a dedicated /ai-lab page:
+              <Link to="/ai-lab" className="text-accent-red font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                View all tools <ArrowRight size={18} />
+              </Link>
+              */}
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                tag: 'CLAUDE CODE',
+                tagColor: 'bg-orange-100 text-orange-700',
+                title: '🚧 Coming soon',
+                description: 'An AI tool built with Claude Code. Details to be added.',
+                link: '#',
+              },
+              {
+                tag: 'CHATGPT',
+                tagColor: 'bg-green-100 text-green-700',
+                title: '🚧 Coming soon',
+                description: 'A custom GPT or ChatGPT-powered tool. Details to be added.',
+                link: '#',
+              },
+              {
+                tag: 'GEMINI',
+                tagColor: 'bg-blue-100 text-blue-700',
+                title: '🚧 Coming soon',
+                description: 'A Gemini Gem or Google AI tool. Details to be added.',
+                link: '#',
+              },
+            ].map((tool, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              >
+                <span className={`inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 ${tool.tagColor}`}>
+                  {tool.tag}
+                </span>
+                <h3 className="text-h3 font-bold mb-3">{tool.title}</h3>
+                <p className="text-body text-text-secondary mb-6">{tool.description}</p>
+                <a
+                  href={tool.link}
+                  className="text-accent-red font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                >
+                  Try it <ArrowRight size={16} />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-white">
         <div className="section-container">
           <motion.div
@@ -174,23 +255,23 @@ export default function Home() {
           >
             <h2 className="text-h1 font-bold mb-4">My Approach</h2>
             <p className="text-body text-text-light max-w-2xl mx-auto">
-              Collaborative, action-based, and AI-enhanced
+              Three things that make the difference between good ideas and real results
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Human-Centred',
-                points: ['Research-driven', 'Empathy first', 'User validation'],
+                title: 'Start with people',
+                points: ['Every brief starts with who this is really for', 'Research and empathy before any solution', 'Validation before you invest'],
               },
               {
-                title: 'Structured',
-                points: ['Clear frameworks', 'Measurable outcomes', 'Replicable processes'],
+                title: 'Build in structure',
+                points: ['Clear frameworks and measurable outcomes', 'Work that scales and replicates without me', 'Processes that stick long after I\'ve left'],
               },
               {
-                title: 'AI-Enhanced',
-                points: ['Modern tools', 'Amplified capabilities', 'Future-ready'],
+                title: 'Amplify with AI',
+                points: ['AI as a working partner, not a shortcut', 'Think faster, spot patterns, deliver more', 'Practical and measurable, not hype'],
               },
             ].map((pillar, index) => (
               <motion.div
@@ -224,17 +305,19 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-h1 font-bold mb-4 text-white">Let's Work Together</h2>
+            <h2 className="text-h1 font-bold mb-4 text-white">Got a challenge worth solving?</h2>
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's discuss how I can help your organisation
+              Book a 30-minute discovery call — no pitch, just a conversation about where you're headed and whether I'm the right person to help.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                to="/contact"
+              <a
+                href="https://calendly.com/jen-jengstodart"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-accent-red px-10 py-3.5 rounded-full font-bold text-small hover:bg-off-white transition-colors"
               >
                 Book a Discovery Call
-              </Link>
+              </a>
               <a
                 href="https://www.linkedin.com/in/jenjeng/"
                 target="_blank"
