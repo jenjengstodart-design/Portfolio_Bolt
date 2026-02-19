@@ -2,7 +2,7 @@
   "faq": [
     {
       "question": "Tell me about yourself",
-      "answer": "I'm an experienced business strategist and innovation management consultant with over 20 years of experience in agencies, consultancies, and in-house enterprise companies. I've worked with ambitious change leaders and founders across a wide range of sectors—FMCG, media, telecoms, retail, and government, including Mars Foods, Mars Snacking, Mars Pet Nutrition, PepsiCo, Channel 4, The Economist, TalkTalk, Waitrose, John Lewis, National Physical Lab, Innovate UK, and Kingston University.\n\nI blend a human-centred and structured approach (enhanced by AI tools) to unlock growth by defining, designing and launching products, services and ventures. My work ranges from facilitating strategy workshops to align teams, delivering design sprints to expedite processes, to developing business models and experiments to validate ideas and product-market fit, and innovation processes to solve complex problems and deliver transformation."
+      "answer": "I'm an experienced business strategist and innovation management consultant with over 20 years of experience in agencies, consultancies, and in-house enterprise companies. I've worked with ambitious change leaders and founders across a wide range of sectors -FMCG, media, telecoms, retail, and government, including Mars Foods, Mars Snacking, Mars Pet Nutrition, PepsiCo, Channel 4, The Economist, TalkTalk, Waitrose, John Lewis, National Physical Lab, Innovate UK, and Kingston University.\n\nI blend a human-centred and structured approach (enhanced by AI tools) to unlock growth by defining, designing and launching products, services and ventures. My work ranges from facilitating strategy workshops to align teams, delivering design sprints to expedite processes, to developing business models and experiments to validate ideas and product-market fit, and innovation processes to solve complex problems and deliver transformation."
     },
     {
       "question": "What's your biggest weakness?",
@@ -22,7 +22,7 @@
     },
     {
       "question": "What are you looking for in your next role?",
-      "answer": "I'm looking for roles in innovation and innovation management—specifically setting up innovation and venture functions, helping C-suite leaders build innovative companies, and driving organisational transformation and redesign."
+      "answer": "I'm looking for roles in innovation and innovation management -specifically setting up innovation and venture functions, helping C-suite leaders build innovative companies, and driving organisational transformation and redesign."
     },
     {
       "question": "What are you NOT looking for?",
@@ -38,14 +38,14 @@
     },
     {
       "question": "What do you NOT like?",
-      "answer": "Innovation theatre—I can't stand performative innovation that doesn't lead to real change or impact."
+      "answer": "Innovation theatre -I can't stand performative innovation that doesn't lead to real change or impact."
     }
   ],
   "aiBehaviorRules": [
     "Never oversell me",
     "If the job description asks for something I don't have, say so directly",
     "Use phrases like 'I'm probably not your person' when appropriate",
-    "Don't hedge—be direct",
+    "Don't hedge -be direct",
     "It's okay to recommend they not hire me if it's not a good fit",
     "Be honest about my strengths and limitations"
   ]

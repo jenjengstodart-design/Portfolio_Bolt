@@ -4,12 +4,12 @@
       "id": "innovation-management",
       "title": "Innovation Management",
       "icon": "Lightbulb",
-      "shortDescription": "Navigate complexity with strategic foresight and agile innovation design",
-      "fullDescription": "I help organisations build innovation capabilities that drive sustainable growth. From setting up innovation functions to coaching C-suite leaders on building innovative companies, I bring structure to complexity.",
+      "shortDescription": "Build the innovation capability your organisation actually needs  - and make it last",
+      "fullDescription": "Most organisations know they need to innovate  - few know how to make it systematic. I work with leadership teams to build the processes, culture, and capabilities that turn innovation from a buzzword into a genuine competitive advantage. From designing the function itself to coaching the leaders who run it, I make sure the work outlasts the engagement.",
       "whenYouNeedIt": [
-        "C-suite leaders building innovation capabilities",
-        "Scale-ups needing structured innovation processes",
-        "Enterprises transforming legacy operations"
+        "You're a C-suite leader who knows innovation matters but doesn't yet have the structure to make it happen consistently",
+        "You're scaling fast and need repeatable innovation processes before the chaos sets in",
+        "You're running a large organisation and the old ways of working are actively holding you back"
       ],
       "whatsIncluded": [
         "Innovation function design and setup",
@@ -30,12 +30,12 @@
       "id": "human-centred-design",
       "title": "Human-Centred Design",
       "icon": "Users",
-      "shortDescription": "Create desirable products and services through design sprints and validation",
-      "fullDescription": "I blend research, design thinking, and rapid prototyping to create experiences that people actually want. User research, journey mapping, and experience optimisation are at the core of my approach.",
+      "shortDescription": "Stop building things people don't want  - design from insight, test before you invest",
+      "fullDescription": "The most expensive mistake an organisation can make is building the wrong thing beautifully. I use research, design thinking, and rapid prototyping to make sure you're solving real problems for real people  - before significant time or money is spent. From customer journey mapping to tested prototypes, the work gives you confidence to invest in the right direction.",
       "whenYouNeedIt": [
-        "Product teams validating new concepts",
-        "Service organisations redesigning experiences",
-        "Companies solving complex customer problems"
+        "You have a product idea but aren't sure if real customers will actually want it",
+        "Your customer experience has gaps  - complaints, drop-offs, friction  - and you need to understand why",
+        "You're tackling a complex problem and need a structured way to find and test solutions quickly"
       ],
       "whatsIncluded": [
         "User research and persona development",
@@ -56,12 +56,12 @@
       "id": "transformation-strategy",
       "title": "Transformation Strategy",
       "icon": "TrendingUp",
-      "shortDescription": "Align stakeholders and accelerate time-to-value for future-ready growth",
-      "fullDescription": "I guide organisations through complex transformations—from operating model redesign to digital transformation. My focus is on aligning stakeholders, building internal capability, and delivering measurable outcomes.",
+      "shortDescription": "Turn complex change into clear action  - with stakeholders aligned and outcomes that stick",
+      "fullDescription": "Transformation fails when it's done *to* people rather than *with* them. I work alongside leadership teams to design operating models that people actually want to work in  - and then build the internal capability to make the change real and lasting. Whether it's a full organisational redesign or a targeted digital transformation, I focus on what comes after the PowerPoint: implementation, adoption, and results.",
       "whenYouNeedIt": [
-        "Organisations undergoing digital transformation",
-        "Companies redesigning operating models",
-        "Leadership teams driving strategic change"
+        "You're part way through a transformation and it's losing momentum or stakeholder buy-in",
+        "You need to redesign how your organisation works but don't know where to start",
+        "Your leadership team is aligned on the destination but not on how to get there"
       ],
       "whatsIncluded": [
         "Operating model design",
@@ -82,22 +82,22 @@
       "id": "ai-capability-building",
       "title": "AI Capability Building",
       "icon": "Sparkles",
-      "shortDescription": "Build AI capabilities that enhance productivity and unlock new value",
-      "fullDescription": "I help organisations navigate the AI landscape—from AI use case discovery development to hands-on capability building. My approach demystifies AI and enables teams to use it as a collaborative partner, not just a tool.",
+      "shortDescription": "Cut through the AI hype  - find what's actually worth building and help your teams use it well",
+      "fullDescription": "Most organisations are drowning in AI possibilities but paralysed about where to actually start. I help teams cut through the noise  - identifying the use cases with real business impact, building the capability to execute them, and making sure AI becomes a genuine working habit rather than a one-off experiment. No hype, no black boxes  - just practical, measurable progress.",
       "whenYouNeedIt": [
-        "Organisations building AI capabilities",
-        "Teams wanting to integrate AI into workflows",
-        "Leaders developing AI strategies"
+        "You know AI matters for your business but your team doesn't know where to begin",
+        "You've seen AI demos that look impressive but haven't found a practical path to implementation",
+        "You want your organisation to use AI consistently  - not just in one team or one project"
       ],
       "whatsIncluded": [
         "AI discovery and use case identification",
-        "AI use case discovery and prioritisation development",
+        "Use case prioritisation and business case development",
         "Team training and hackathons",
         "Workflow design and automation",
         "AI tool selection and implementation"
       ],
       "deliverables": [
-        "AI use case discovery and prioritisations",
+        "Prioritised AI use case roadmap",
         "Prioritised use case backlogs",
         "Training programmes and playbooks",
         "Implemented workflows and tools"
