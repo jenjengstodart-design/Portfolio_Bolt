@@ -168,11 +168,20 @@ export default function ChatWidget({ onOpen }: ChatWidgetProps) {
 
       const data = await response.json();
 
+      // The API returns an array of blocks and text is not always first - a
+      // thinking block can precede it. Join every text block rather than
+      // trusting content[0].
+      const replyText = Array.isArray(data.content)
+        ? data.content
+            .filter((block: { type?: string }) => block?.type === 'text')
+            .map((block: { text?: string }) => block.text ?? '')
+            .join('\n\n')
+            .trim()
+        : '';
+
       const assistantMessage: Message = {
         role: 'assistant',
-        content: data.content?.[0]?.type === 'text'
-          ? data.content[0].text
-          : 'Sorry, I encountered an error.',
+        content: replyText || 'Sorry, I encountered an error.',
       };
 
       setMessages((prev) => [...prev, assistantMessage]);

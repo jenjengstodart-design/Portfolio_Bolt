@@ -167,7 +167,7 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
     });
 
     const data = (await upstream.json()) as {
-      content?: unknown;
+      content?: Array<{ type?: string }>;
       model?: string;
       stop_reason?: string;
       error?: { message?: string };
@@ -180,8 +180,15 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
       return json({ error: 'The assistant is temporarily unavailable.' }, 502, origin);
     }
 
+    // Only text blocks reach the browser. A response can also carry thinking
+    // blocks, which the widget has no use for and which carry internal
+    // reasoning and its signature - no reason to ship either to a visitor.
+    const textBlocks = Array.isArray(data.content)
+      ? data.content.filter((block) => block?.type === 'text')
+      : [];
+
     return json(
-      { content: data.content, model: data.model, stop_reason: data.stop_reason },
+      { content: textBlocks, model: data.model, stop_reason: data.stop_reason },
       200,
       origin
     );
