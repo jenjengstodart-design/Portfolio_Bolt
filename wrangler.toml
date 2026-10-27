@@ -1,0 +1,28 @@
+# Cloudflare Pages configuration for jenjeng.com.
+#
+# IMPORTANT - READ BEFORE TRUSTING THIS FILE.
+#
+# Pages treats bindings as PROJECT-level settings. A direct-upload deploy
+# (`wrangler pages deploy`) does NOT apply the kv_namespaces below to the live
+# project - verified on 2026-10-27, deploy printed no bindings and KV stayed
+# empty under live traffic. The live binding is configured in the Cloudflare
+# dashboard: Workers & Pages > jenjeng-portfolio > Settings > Bindings.
+#
+# This file is kept for two reasons: `wrangler pages dev` DOES read it, so
+# local runs get the same binding name; and it records which namespace the
+# dashboard should point at, so a missing binding is visible in the repo
+# rather than invisible. If you change the binding here, change it in the
+# dashboard too - this file alone changes nothing in production.
+#
+# ANTHROPIC_API_KEY is deliberately NOT here - it is a secret, set with
+# `wrangler pages secret put` and never committed.
+
+name = "jenjeng-portfolio"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-27"
+
+# Shared counter for the chat rate limit. Without it the count lives in one
+# isolate's memory and barely holds. Namespace created 2026-10-27.
+[[kv_namespaces]]
+binding = "CHAT_RATE_LIMIT"
+id = "11e23b6a04e64f7fb4f9f32267d4c7a0"
