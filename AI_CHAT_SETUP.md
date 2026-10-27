@@ -1,223 +1,133 @@
-# AI Chat Setup Guide
+# AI Chat Setup
 
-Complete guide to enable the AI-powered chat assistant on Jen Jeng's portfolio website.
-
-## Quick Setup (3 Steps)
-
-### 1️⃣ Get Your Anthropic API Key
-
-1. Visit **https://console.anthropic.com**
-2. Create an account or sign in
-3. Click on **"API Keys"** in the left sidebar
-4. Click **"Create Key"**
-5. Give it a name (e.g., "Portfolio Website")
-6. Copy the key (starts with `sk-ant-...`)
-
-**Important**: Keep this key secure and never commit it to version control!
-
-### 2️⃣ Add API Key to Supabase Secrets
-
-The API key is stored securely in Supabase Edge Function secrets, not in your `.env` file.
-
-1. Go to your **Supabase Dashboard**
-2. Navigate to **Edge Functions** → **Secrets** (in settings)
-3. Click **"New Secret"**
-4. Enter:
-   - **Name**: `ANTHROPIC_API_KEY`
-   - **Value**: Your complete API key (starts with `sk-ant-...`)
-5. Click **"Save Secret"**
-
-Do **NOT** add this to your `.env` file. The Edge Function automatically reads it from Supabase Secrets.
-
-### 3️⃣ Verify the Setup
-
-The chat widget will start working immediately once the secret is saved. No restart needed!
-
-**That's it!** The AI chat is now fully functional.
-
-## Testing the AI Chat
-
-1. Look for the red chat button in the bottom-right corner
-2. Click it to open the chat widget
-3. Try asking questions like:
-   - "Tell me about yourself"
-   - "What services do you offer?"
-   - "What's your experience with AI?"
-   - "Tell me about the Mars project"
-   - "What are you looking for in your next role?"
-
-## How the AI Chat Works
-
-### Intelligent Context
-The AI assistant has access to:
-- ✅ Complete profile information
-- ✅ All skills and certifications
-- ✅ Work experience and achievements
-- ✅ All 8 project case studies
-- ✅ Service offerings and deliverables
-- ✅ Pre-written FAQ answers
-
-### Behavior Rules
-The AI follows these critical rules:
-- **Never oversells** - honest and direct
-- **Admits gaps** - says "I don't have that information" when needed
-- **First person** - speaks as Jen ("I have experience...")
-- **Evidence-based** - references specific projects
-- **Professional** - conversational but business-appropriate
-
-### Data Storage
-All conversations are stored in Supabase:
-- Chat sessions tracked
-- Messages saved for reference
-- Popular questions identified
-- Analytics for insights
-
-## API Costs
-
-Anthropic Claude pricing (as of 2024):
-- **Claude 3.5 Sonnet**: ~$3 per million input tokens, $15 per million output tokens
-- Average chat message: ~500-1000 tokens
-- Estimated cost: **$0.01-0.02 per conversation**
-
-Very affordable for a portfolio website!
-
-## Troubleshooting
-
-### "I'm a demo AI assistant..." message appears
-
-**Problem**: API key not configured in Supabase Secrets
-**Solution**:
-1. Go to Supabase Dashboard → Edge Functions → Secrets
-2. Verify `ANTHROPIC_API_KEY` secret is set with your full API key
-3. Hard refresh browser (Ctrl+Shift+R)
-4. Check browser console for error details
-
-### "Error processing your message"
-
-**Problem**: API request failed
-**Solutions**:
-1. Check API key is valid
-2. Verify you have API credits in Anthropic account
-3. Check browser console for detailed error
-4. Ensure internet connection is stable
-
-### Chat not appearing
-
-**Problem**: Widget not rendering
-**Solutions**:
-1. Check browser console for JavaScript errors
-2. Ensure Supabase connection is working
-3. Try clearing browser cache
-
-## Security Notes
-
-### Server-Side API Key Protection
-The API key is securely stored in Supabase Edge Function Secrets and is **never** exposed to the browser. This is the recommended approach and suitable for:
-- Personal portfolio websites
-- Small business websites
-- Production applications
-- Any public-facing website
-
-### How It Works
-1. Chat requests go to the Supabase Edge Function (`/functions/chat`)
-2. The Edge Function reads the API key from Supabase Secrets
-3. Requests to Anthropic are made server-side
-4. Only the response is sent back to the browser
-5. The API key never leaves Supabase infrastructure
-
-### Why This Is Secure
-✅ API key never exposed to browser
-✅ API key never stored in `.env` or version control
-✅ Suitable for production applications
-✅ Can handle any traffic level
-✅ Better cost control and rate limiting
-
-## Customizing AI Behavior
-
-### Update FAQ Answers
-Edit `/src/content/faq.json`:
-```json
-{
-  "faq": [
-    {
-      "question": "Your question here",
-      "answer": "Your pre-written answer here"
-    }
-  ]
-}
-```
-
-### Modify Behavior Rules
-Edit the `aiBehaviorRules` array in `/src/content/faq.json`:
-```json
-{
-  "aiBehaviorRules": [
-    "Never oversell me",
-    "Your custom rule here"
-  ]
-}
-```
-
-### Change AI Model
-Edit `/src/components/ChatWidget.tsx`, line ~178:
-```typescript
-model: 'claude-3-5-sonnet-20241022',  // Current model
-// Options:
-// - 'claude-3-5-sonnet-20241022' (recommended, balanced)
-// - 'claude-3-opus-20240229' (most capable, expensive)
-// - 'claude-3-haiku-20240307' (fastest, cheapest)
-```
-
-### Adjust Response Length
-Edit `/src/components/ChatWidget.tsx`, line ~179:
-```typescript
-max_tokens: 1024,  // Current: ~750 words max
-// Increase for longer responses
-// Decrease for shorter, quicker answers
-```
-
-## Analytics & Insights
-
-View chat analytics in Supabase:
-
-### Popular Questions
-```sql
-SELECT question, ask_count, last_asked
-FROM popular_questions
-ORDER BY ask_count DESC
-LIMIT 10;
-```
-
-### Total Conversations
-```sql
-SELECT COUNT(*) as total_conversations
-FROM chat_conversations;
-```
-
-### Messages Per Day
-```sql
-SELECT DATE(timestamp) as date, COUNT(*) as messages
-FROM chat_messages
-GROUP BY DATE(timestamp)
-ORDER BY date DESC;
-```
-
-## Support
-
-If you encounter issues:
-1. Check this guide first
-2. Review browser console for errors
-3. Verify `ANTHROPIC_API_KEY` secret is set in Supabase
-4. Ensure all dependencies are installed: `npm install`
-
-For Anthropic API issues:
-- Anthropic Documentation: https://docs.anthropic.com
-- Anthropic Support: support@anthropic.com
-
-For Supabase Edge Function issues:
-- Supabase Docs: https://supabase.com/docs/guides/functions
-- Check Edge Function logs in Supabase Dashboard
+How the chat assistant on jenjeng.com works, and the one thing you need to set
+for it to run.
 
 ---
 
-**Ready to chat?** Add your API key to Supabase Secrets and start conversing!
+## Architecture
+
+```
+Browser (ChatWidget.tsx)
+   │  POST /api/chat   { messages: [...] }
+   ▼
+Cloudflare Pages Function  (functions/api/chat.ts)
+   │  - checks the Origin header
+   │  - validates and size-caps the input
+   │  - rate limits per IP
+   │  - builds the system prompt server-side
+   │  - adds the Anthropic key
+   ▼
+api.anthropic.com/v1/messages   (claude-sonnet-5-5)
+```
+
+The function ships with the site, so there's no second service to keep alive.
+
+**Why it moved.** This used to be a Supabase Edge Function. That project sat on
+the free tier, auto-paused whenever it went idle, and was eventually deleted.
+Its ref stopped resolving in DNS, so every message failed before it reached any
+code, and nothing alerted anyone. A keep-alive cron was written to prevent the
+pausing but was never committed, so it never ran. A Pages Function removes that
+whole class of failure: same deploy as the site, nothing separate to expire.
+
+---
+
+## The one required setting
+
+`ANTHROPIC_API_KEY` as an environment variable on the Cloudflare Pages project.
+
+1. Get a key at https://console.anthropic.com → API Keys → Create Key
+2. Cloudflare dashboard → Workers & Pages → `jenjeng-portfolio` → Settings →
+   Environment variables
+3. Add `ANTHROPIC_API_KEY` for **Production**. Add it to **Preview** too if you
+   want preview deploys to answer.
+4. Redeploy. Env var changes only apply to builds made after you save them.
+
+Until that's set, the assistant replies "The assistant is not configured yet"
+rather than failing silently. That's deliberate - a missing secret should look
+like a config problem, not a broken chatbot.
+
+**Never prefix this key with `VITE_` and never put it in `.env`.** Vite inlines
+every `VITE_*` variable into the public JavaScript bundle, so that would publish
+your key to anyone who views source.
+
+---
+
+## Recommended: rate limiting that actually holds
+
+The function limits each IP to 20 messages per 24 hours. Without a KV namespace
+it keeps that count in memory, which means the count is per edge isolate and
+resets often - it blunts one noisy client but won't stop a determined one.
+
+To make it real:
+
+1. Cloudflare dashboard → Storage & Databases → KV → Create a namespace
+   (call it `chat-rate-limit`)
+2. Workers & Pages → `jenjeng-portfolio` → Settings → Bindings → KV namespace
+3. Variable name must be exactly `CHAT_RATE_LIMIT`
+4. Redeploy
+
+The function picks it up automatically when it's bound.
+
+This matters because the endpoint is public and spends your Anthropic credits.
+
+---
+
+## Running it locally
+
+```bash
+npm run build
+npx wrangler pages dev dist --binding ANTHROPIC_API_KEY=sk-ant-your-key-here
+```
+
+Then open the printed localhost URL. `localhost:5173` and `localhost:4173` are
+both in the allowed-origins list, as are `jenjeng.com`, `www.jenjeng.com` and
+`jenjeng-portfolio.pages.dev`.
+
+`npm run dev` alone runs Vite without the function, so the chat won't answer.
+
+---
+
+## Responses the function can return
+
+| Status | Meaning |
+|---|---|
+| 200 | Success. `{ content, model, stop_reason }` |
+| 400 | Malformed input, too many messages, or over 4000 characters |
+| 403 | Origin not in the allow-list |
+| 429 | Rate limit reached (20 per IP per 24h) |
+| 503 | `ANTHROPIC_API_KEY` isn't set |
+| 502 | Anthropic returned an error, or the request failed |
+
+Upstream errors are logged in full but returned generically, so account and key
+detail never reaches the browser. Check the Pages Function logs in the
+Cloudflare dashboard when you need the real reason.
+
+---
+
+## Troubleshooting
+
+**"The assistant is not configured yet"** - `ANTHROPIC_API_KEY` isn't set on the
+Pages project, or it was added after the current deploy was built. Add it and
+redeploy.
+
+**"The assistant is temporarily unavailable"** - Anthropic rejected the call.
+Usually an invalid key or exhausted credits. The real error is in the Pages
+Function logs.
+
+**403 on every message** - the browser's Origin header isn't in
+`ALLOWED_ORIGINS` in `functions/api/chat.ts`. Add the hostname you're serving
+from.
+
+**Chat answers but nothing is logged** - expected. Transcript logging and
+analytics go to Supabase, which is optional and currently not connected. The
+assistant doesn't depend on it.
+
+---
+
+## What Supabase is still for
+
+Analytics events, chat transcripts, and the contact form's send-email function.
+All optional as far as the assistant is concerned. The original project was
+deleted, so these are inert until a new project is wired up. The site and the
+assistant both work without it.

@@ -103,36 +103,33 @@ All content is stored in JSON files under `/src/content/`. Simply edit these fil
 
 The AI chat widget is fully implemented and ready to use. To enable it:
 
+The chat widget posts to `/api/chat`, a Cloudflare Pages Function that lives in
+`functions/api/chat.ts` and ships with the site. The Anthropic key stays on the
+server and never reaches the browser.
+
 #### Step 1: Get an Anthropic API Key
 
 1. Go to https://console.anthropic.com
-2. Sign up or log in to your account
-3. Navigate to "API Keys" in the dashboard
-4. Click "Create Key" and copy your API key
+2. Sign up or log in
+3. Open "API Keys" and create one
 
-#### Step 2: Add API Key to Environment
+#### Step 2: Add it to Cloudflare Pages
 
-Add your API key to the `.env` file:
+Cloudflare dashboard → Workers & Pages → `jenjeng-portfolio` → Settings →
+Environment variables. Add `ANTHROPIC_API_KEY` for Production (and Preview if
+you want previews to work), then redeploy so the new value is picked up.
+
+Never put this key in `.env` or anything prefixed `VITE_`. Vite inlines every
+`VITE_*` variable into the public bundle, so that would publish the key.
+
+#### Step 3: Run it locally
 
 ```bash
-VITE_ANTHROPIC_API_KEY=sk-ant-your-key-here
+npm run build
+npx wrangler pages dev dist --binding ANTHROPIC_API_KEY=sk-ant-your-key-here
 ```
 
-#### Step 3: Restart Development Server
-
-```bash
-npm run dev
-```
-
-The AI chat is now fully functional! It will:
-- Answer questions about Jen's experience and skills
-- Provide information about services and projects
-- Use pre-written FAQ answers for common questions
-- Follow behavior rules (honest, direct, no overselling)
-- Store conversations in Supabase
-- Track popular questions for analytics
-
-**Note**: The chat works in demo mode without an API key, providing basic responses. For full AI capabilities, add your Anthropic API key.
+Full detail, including rate limiting, is in `AI_CHAT_SETUP.md`.
 
 ### Customizing Colors
 

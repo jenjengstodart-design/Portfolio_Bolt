@@ -1,7 +1,13 @@
 # 📌 Source of Truth: Jen Jeng Portfolio Website
 
-> **The GitHub repository is ALWAYS the definitive, latest version of this website.**
-> Local folders are working copies only — never assume they are the latest.
+> **The GitHub repository is the definitive version of this website.**
+> Local folders are working copies only - never assume they are the latest.
+
+> ⚠️ **This only holds if you push.** On 2026-10-27 eight files were found live
+> on jenjeng.com but absent from GitHub, deployed straight from a local `dist`
+> with `wrangler pages deploy`. Anyone pulling main and deploying would have
+> silently reverted the site. If you deploy with wrangler, commit and push the
+> same change.
 
 ---
 
@@ -13,7 +19,7 @@
 | **Live Site** | https://jenjeng.com |
 | **Hosting** | Cloudflare Pages (auto-deploys from `main` branch on GitHub) |
 | **Database/AI** | Supabase project: `jenjengstodart-portfolio` |
-| **Last verified** | 2026-04-27 |
+| **Last verified** | 2026-10-27 |
 
 ---
 
@@ -51,25 +57,43 @@ These local folders exist for reference only. Do NOT edit them directly or treat
 
 ## 🤖 AI Chatbot (Jen's AI Assistant)
 
-The chat widget on jenjeng.com uses:
-- **Supabase Edge Function** (`/functions/v1/chat`) to proxy calls to Anthropic Claude
-- **Anthropic API key** stored as a Supabase Secret (never in `.env`)
-- **keep-alive** function (GitHub Action scheduled daily) to prevent Supabase auto-pausing
+The chat widget posts to **`/api/chat`**, a **Cloudflare Pages Function** at
+`functions/api/chat.ts`. It deploys with the site, so there's nothing separate
+to keep alive.
 
-### ⚡ If the chatbot stops working:
-1. Check https://supabase.com/dashboard → project `jenjengstodart-portfolio`
-2. If status shows "Paused" → click **Resume project**
-3. Wait ~2 minutes → chatbot will be live again
-4. The GitHub Action keep-alive should prevent this in future
+- Anthropic key: `ANTHROPIC_API_KEY` env var on the Cloudflare Pages project (server-side only)
+- Model: `claude-sonnet-5-5`
+- Rate limit: 20 messages per IP per 24h (bind a KV namespace `CHAT_RATE_LIMIT` to make it hold across edge locations)
+- Full setup: `AI_CHAT_SETUP.md`
 
----
+### ⚡ If the chatbot stops working
+
+1. "The assistant is not configured yet" → `ANTHROPIC_API_KEY` isn't set on the
+   Pages project, or it was added after the current deploy. Set it and redeploy.
+2. "The assistant is temporarily unavailable" → Anthropic rejected the call.
+   Usually an invalid key or spent credits. Real reason is in the Pages Function
+   logs in the Cloudflare dashboard.
+3. Anything else → check the Pages Function logs first.
+
+### ⚠️ History
+
+The assistant previously ran on a Supabase Edge Function. That project was on
+the free tier, auto-paused while idle, and was eventually **deleted** - its ref
+`jrdasiwkmwsxmghlwjnh` stopped resolving in DNS, so every message failed at the
+network layer and nothing alerted anyone. The keep-alive GitHub Action written
+to prevent the pausing was never committed, so it never ran once.
+
+Supabase is now optional and carries analytics, chat transcripts, and the
+contact form's send-email function only. Those are inert until a new project is
+wired up. **The contact form's send path is still broken** for the same reason.
 
 ## 🗓️ Change Log
 
 | Date | Change | Who |
 |---|---|---|
 | 2026-02-12 | Services page, project labels, contact email updated | Jen + Claude Code |
-| 2026-04-27 | Supabase reactivated; keep-alive GitHub Action added; SOURCE_OF_TRUTH.md created | Jen + Antigravity |
+| 2026-04-27 | Supabase reactivated; keep-alive Action written (but never committed, so it never ran); SOURCE_OF_TRUTH.md created | Jen + Antigravity |
+| 2026-10-27 | Chat assistant moved off the deleted Supabase project to a Cloudflare Pages Function at `/api/chat`; system prompt moved server-side; repo synced with production | Jen + Claude Code |
 
 ---
 

@@ -28,3 +28,9 @@ supabase/.temp
 # Local working files (not for a public repo)
 discovery-call-crm.xlsx
 CONTENT_REWRITE_SUGGESTIONS.md
+
+# Wrangler local secrets
+.dev.vars
+
+# Wrangler local state
+.wrangler

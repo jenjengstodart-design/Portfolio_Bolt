@@ -61,7 +61,11 @@ These are AI giveaways:
 - Site: jenjeng.com
 - Stack: React 18 + TypeScript + Vite + Tailwind CSS
 - Hosting: Cloudflare Pages (project: jenjeng-portfolio)
-- Backend: Supabase (project ref: jrdasiwkmwsxmghlwjnh)
+- Chat backend: Cloudflare Pages Function at `functions/api/chat.ts`, served at `/api/chat`.
+  Needs `ANTHROPIC_API_KEY` set in Cloudflare Pages env vars. Optionally bind a KV
+  namespace called `CHAT_RATE_LIMIT` for rate limiting that holds across edge locations.
+- Backend (optional, analytics + chat logging only): Supabase. The original project ref
+  `jrdasiwkmwsxmghlwjnh` was deleted and no longer resolves.
 - GitHub: git@github.com:jenjengstodart-design/Portfolio_Bolt.git
 - Deploy command: `npx wrangler pages deploy dist --project-name jenjeng-portfolio --commit-dirty=true`
 - GA4 ID: G-VH1YDB45NY

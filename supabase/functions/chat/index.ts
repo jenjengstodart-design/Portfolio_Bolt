@@ -1,3 +1,11 @@
+// SUPERSEDED. The live chat assistant is now `functions/api/chat.ts`, a
+// Cloudflare Pages Function served at /api/chat.
+//
+// This ran on a free-tier Supabase project that auto-paused while idle and was
+// eventually deleted, which took the assistant offline with no warning. Kept
+// for reference only - nothing calls it. Don't point the client back here
+// without first solving the pausing problem.
+
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
