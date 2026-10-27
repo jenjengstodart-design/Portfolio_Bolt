@@ -155,7 +155,15 @@ export default function ChatWidget({ onOpen }: ChatWidgetProps) {
           errorData = { error: errorText || 'Unknown error' };
         }
 
-        throw new Error(errorData.error || `API error: ${response.status} ${response.statusText}`);
+        // 429 and 503 carry text worth showing the visitor verbatim.
+        const showVerbatim = response.status === 429 || response.status === 503;
+        const err = new Error(
+          errorData.error || `API error: ${response.status} ${response.statusText}`
+        );
+        if (showVerbatim && errorData.error) {
+          (err as Error & { userFacing?: string }).userFacing = errorData.error;
+        }
+        throw err;
       }
 
       const data = await response.json();
@@ -184,9 +192,12 @@ export default function ChatWidget({ onOpen }: ChatWidgetProps) {
 
     } catch (error) {
       console.error('Error sending message:', error);
+      const userFacing = (error as Error & { userFacing?: string })?.userFacing;
       const errorMessage: Message = {
         role: 'assistant',
-        content: 'Sorry, I encountered an error processing your message. Please try again or contact Jen directly at jen.jengstodart@gmail.com',
+        content:
+          userFacing ??
+          'Sorry, I encountered an error processing your message. Please try again or contact Jen directly at jen.jengstodart@gmail.com',
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
