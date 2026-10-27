@@ -1,10 +1,17 @@
 name: Supabase Keep-Alive
 
+# DISABLED SCHEDULE. The Supabase project this pinged was deleted, so a daily
+# run would ping nothing. The chat assistant no longer depends on Supabase - it
+# runs on the /api/chat Cloudflare Pages Function. Supabase is only needed again
+# if analytics, chat transcripts, or the contact form's send-email are restored.
+#
+# To re-enable: uncomment the two schedule lines below, and check that the
+# SUPABASE_URL and SUPABASE_ANON_KEY repo secrets point at the new project.
+
 on:
-  schedule:
-    # Runs every day at 10:00 UTC
-    - cron: "0 10 * * *"
-  workflow_dispatch: # allow manual trigger
+  # schedule:
+  #   - cron: "0 10 * * *"   # daily at 10:00 UTC
+  workflow_dispatch: # manual trigger
 
 jobs:
   ping:
@@ -12,9 +19,17 @@ jobs:
     steps:
       - name: Ping Supabase keep-alive function
         run: |
-          curl -sf -X POST \
+          if [ -z "${{ secrets.SUPABASE_URL }}" ]; then
+            echo "SUPABASE_URL is not set - nothing to ping."
+            exit 1
+          fi
+
+          # No `|| echo` here. This previously swallowed every failure, so the
+          # job reported success even when the host had stopped resolving. A
+          # keep-alive that cannot fail tells you nothing.
+          curl -sf --max-time 30 -X POST \
             "${{ secrets.SUPABASE_URL }}/functions/v1/keep-alive" \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
-            -H "Content-Type: application/json" \
-            && echo "Keep-alive ping succeeded" \
-            || echo "Keep-alive ping failed"
+            -H "Content-Type: application/json"
+
+          echo "Keep-alive ping succeeded"
