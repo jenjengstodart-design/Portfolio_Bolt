@@ -43,6 +43,18 @@ whole class of failure: same deploy as the site, nothing separate to expire.
    want preview deploys to answer.
 4. Redeploy. Env var changes only apply to builds made after you save them.
 
+Faster alternative, and the route actually used on 2026-10-27 - the key is
+typed straight into wrangler and never touches a file or a clipboard history:
+
+```bash
+npx wrangler pages secret put ANTHROPIC_API_KEY --project-name jenjeng-portfolio
+```
+
+It prompts for the value and masks it as you paste. Works from any directory,
+since the project is named explicitly. You still have to redeploy afterwards -
+Pages binds env vars at deploy time, so the deployment already running will
+keep returning 503 until you push a new one.
+
 Until that's set, the assistant replies "The assistant is not configured yet"
 rather than failing silently. That's deliberate - a missing secret should look
 like a config problem, not a broken chatbot.
