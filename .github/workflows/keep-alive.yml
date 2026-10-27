@@ -1,0 +1,20 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Runs every day at 10:00 UTC
+    - cron: "0 10 * * *"
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase keep-alive function
+        run: |
+          curl -sf -X POST \
+            "${{ secrets.SUPABASE_URL }}/functions/v1/keep-alive" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Content-Type: application/json" \
+            && echo "Keep-alive ping succeeded" \
+            || echo "Keep-alive ping failed"
