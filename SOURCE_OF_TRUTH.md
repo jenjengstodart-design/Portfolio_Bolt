@@ -17,7 +17,7 @@
 |---|---|
 | **GitHub Repo** | https://github.com/jenjengstodart-design/Portfolio_Bolt |
 | **Live Site** | https://jenjeng.com |
-| **Hosting** | Cloudflare Pages (auto-deploys from `main` branch on GitHub) |
+| **Hosting** | Cloudflare Pages, project `jenjeng-portfolio`. **Direct upload - there is no Git integration, so pushing to GitHub does NOT deploy.** Deploys happen with `wrangler` (step 4 below). Verified 2026-10-27: the repo has zero GitHub deployments. |
 | **Database/AI** | Supabase project: `jenjengstodart-portfolio` |
 | **Last verified** | 2026-10-27 |
 
@@ -50,8 +50,14 @@ These local folders exist for reference only. Do NOT edit them directly or treat
    git commit -m "describe what changed"
    git push origin main
 
-4. Cloudflare Pages auto-deploys → jenjeng.com updates within ~2 minutes
+4. Build and deploy (this is what actually updates the live site):
+   npm run build
+   npx wrangler pages deploy dist --project-name jenjeng-portfolio
 ```
+
+**Steps 3 and 4 are both required.** Pushing alone changes nothing on the live
+site, and deploying alone leaves GitHub behind production. Skipping step 3 is
+exactly how eight files ended up live but uncommitted.
 
 ---
 
