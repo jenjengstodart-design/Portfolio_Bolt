@@ -180,12 +180,14 @@ export default function Services() {
             <p className="text-body mb-8 opacity-90 max-w-2xl mx-auto">
               Let's discuss how I can help your organisation
             </p>
-            <Link
-              to="/contact"
+            <a
+              href="https://calendly.com/jen-jengstodart"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-accent-red px-10 py-3.5 rounded-full font-bold text-small hover:bg-off-white transition-colors inline-block"
             >
               Book a Discovery Call
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

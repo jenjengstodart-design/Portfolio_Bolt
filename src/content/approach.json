@@ -1,0 +1,32 @@
+{
+  "pillars": [
+    {
+      "title": "Start with people",
+      "points": [
+        "Every brief starts with who this is really for",
+        "Research and empathy before any solution",
+        "Validation before you invest"
+      ]
+    },
+    {
+      "title": "Build in structure",
+      "points": [
+        "Clear frameworks and measurable outcomes",
+        "Work that scales and replicates without me",
+        "Processes that stick long after I've left"
+      ]
+    },
+    {
+      "title": "Amplify with AI",
+      "points": [
+        "AI as a working partner, not a shortcut",
+        "Think faster, spot patterns, deliver more",
+        "Practical and measurable, not hype"
+      ]
+    }
+  ],
+  "aiLab": {
+    "description": "Tools I've built using ChatGPT, Claude Code and Gemini — real AI, real use cases",
+    "tools": []
+  }
+}

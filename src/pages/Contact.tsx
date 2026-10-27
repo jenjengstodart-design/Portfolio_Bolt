@@ -29,24 +29,44 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      const { error } = await supabase.from('analytics_events').insert({
-        event_type: 'contact_form_submission',
-        page: '/contact',
-        metadata: data,
-        session_id: sessionStorage.getItem('session_id') || 'unknown',
-      });
+      // Send email via Resend through Supabase Edge Function
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            company: data.company,
+            inquiryType: data.inquiryType,
+            message: data.message,
+          }),
+        }
+      );
 
-      if (error) throw error;
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Failed to send email');
+      }
+
+      // Also log to Supabase analytics (best effort)
+      try {
+        await supabase.from('analytics_events').insert({
+          event_type: 'contact_form_submission',
+          page: '/contact',
+          metadata: data,
+          session_id: sessionStorage.getItem('session_id') || 'unknown',
+        });
+      } catch (_) { /* ignore analytics errors */ }
 
       setSubmitStatus('success');
       reset();
     } catch (error) {
       console.error('Error submitting form:', error);
-
-      const subject = encodeURIComponent(`${data.inquiryType}: Message from ${data.name}`);
-      const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'N/A'}\nInquiry Type: ${data.inquiryType}\n\nMessage:\n${data.message}`);
-      window.location.href = `mailto:${profileData.email}?subject=${subject}&body=${body}`;
-
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -65,7 +85,7 @@ export default function Contact() {
           >
             <h1 className="text-hero font-bold mb-6">Let's Connect</h1>
             <p className="text-h3 text-text-light">
-              Ready to discuss how I can help your organisation thrive? Get in touch.
+              Have a challenge in mind, or just want to explore what's possible? Either way, I'd love to hear from you.
             </p>
           </motion.div>
 
@@ -75,7 +95,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-h2 font-bold mb-6">Get in Touch</h2>
+              <h2 className="text-h2 font-bold mb-6">Drop me a message</h2>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
@@ -172,13 +192,13 @@ export default function Contact() {
 
                 {submitStatus === 'success' && (
                   <div className="p-4 bg-green-50 text-green-800 rounded-lg text-body">
-                    Thank you for your message! I'll get back to you soon.
+                    ✅ Message sent! Jen will get back to you at {profileData.email} shortly.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 text-red-800 rounded-lg text-body">
-                    Opening your email client to send the message directly...
+                    Something went wrong. Please email Jen directly at {profileData.email}
                   </div>
                 )}
               </form>

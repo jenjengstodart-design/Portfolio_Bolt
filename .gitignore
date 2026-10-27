@@ -21,3 +21,10 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Supabase CLI scratch
+supabase/.temp
+
+# Local working files (not for a public repo)
+discovery-call-crm.xlsx
+CONTENT_REWRITE_SUGGESTIONS.md

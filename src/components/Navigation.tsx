@@ -54,9 +54,9 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary ml-4">
+            <a href="https://calendly.com/jen-jengstodart" target="_blank" rel="noopener noreferrer" className="btn-primary ml-4">
               Book a Call
-            </Link>
+            </a>
           </div>
 
           <button
@@ -85,9 +85,9 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary mt-4 text-center">
+            <a href="https://calendly.com/jen-jengstodart" target="_blank" rel="noopener noreferrer" className="btn-primary mt-4 text-center">
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       )}

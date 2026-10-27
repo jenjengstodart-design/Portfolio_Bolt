@@ -8,6 +8,7 @@ import experienceData from '../content/experience.json';
 import projectsData from '../content/projects.json';
 import servicesData from '../content/services.json';
 import faqData from '../content/faq.json';
+import approachData from '../content/approach.json';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -164,6 +165,9 @@ ${JSON.stringify(projectsData.categories.map(cat => ({
   }))
 })), null, 2)}
 
+JEN'S APPROACH (three core pillars):
+${approachData.pillars.map(p => `${p.title}:\n${p.points.map(pt => `- ${pt}`).join('\n')}`).join('\n\n')}
+
 PRE-WRITTEN FAQ ANSWERS:
 ${faqData.faq.map((item: { question: string; answer: string }) => `Q: ${item.question}\nA: ${item.answer}`).join('\n\n')}
 
@@ -296,7 +300,7 @@ When answering:
           >
             <div className="bg-accent-red text-white p-4 rounded-t-2xl flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <MessageCircle size={20} />
+                <img src="/images/1_cartoon_headshot.png" alt="Jen" className="w-8 h-8 rounded-full object-cover object-top border-2 border-white/40" />
                 <span className="font-bold text-body">Chat with Jen's AI Assistant</span>
               </div>
               <button
@@ -402,7 +406,7 @@ When answering:
           className={`relative bg-accent-red text-white rounded-full shadow-lg hover:shadow-red flex items-center justify-center gap-2 transition-all duration-300 ${
             showSignpost && !isOpen
               ? 'px-5 py-4 text-sm font-bold'
-              : 'p-4'
+              : 'p-1'
           }`}
           aria-label="Open chat"
         >
@@ -410,11 +414,11 @@ When answering:
             <X size={28} />
           ) : showSignpost ? (
             <>
-              <MessageCircle size={20} />
+              <img src="/images/1_cartoon_headshot.png" alt="Jen" className="w-8 h-8 rounded-full object-cover object-top" />
               <span className="text-white text-sm font-bold whitespace-nowrap">Chat with Jen</span>
             </>
           ) : (
-            <MessageCircle size={28} />
+            <img src="/images/1_cartoon_headshot.png" alt="Jen" className="w-12 h-12 rounded-full object-cover object-top" />
           )}
         </motion.button>
       </div>

@@ -4,6 +4,7 @@ import { Lightbulb, Users, TrendingUp, Sparkles, ArrowRight, MessageCircle } fro
 import profileData from '../content/profile.json';
 import servicesData from '../content/services.json';
 import projectsData from '../content/projects.json';
+import approachData from '../content/approach.json';
 import { downloadCV } from '../lib/storage';
 
 const iconMap: Record<string, React.ElementType> = {
@@ -53,7 +54,7 @@ export default function Home() {
               className="text-small text-accent-red font-semibold mb-8 hover:underline text-left flex items-center gap-1.5 transition-colors"
             >
               <MessageCircle size={15} />
-              Curious what I do? Ask my AI — it knows my work inside out
+              Curious about me and what I do? Ask my AI — it knows my work inside out
             </button>
             <div className="flex flex-wrap gap-4">
               <Link to="/work" className="btn-primary">
@@ -260,20 +261,7 @@ export default function Home() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Start with people',
-                points: ['Every brief starts with who this is really for', 'Research and empathy before any solution', 'Validation before you invest'],
-              },
-              {
-                title: 'Build in structure',
-                points: ['Clear frameworks and measurable outcomes', 'Work that scales and replicates without me', 'Processes that stick long after I\'ve left'],
-              },
-              {
-                title: 'Amplify with AI',
-                points: ['AI as a working partner, not a shortcut', 'Think faster, spot patterns, deliver more', 'Practical and measurable, not hype'],
-              },
-            ].map((pillar, index) => (
+            {approachData.pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
