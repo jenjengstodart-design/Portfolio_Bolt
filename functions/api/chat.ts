@@ -32,6 +32,14 @@ const ALLOWED_ORIGINS = new Set([
 
 const RATE_LIMIT_MAX = 20;
 const RATE_LIMIT_WINDOW_MS = 24 * 60 * 60 * 1000;
+
+// Site-wide ceiling across every visitor, and the only real guard on spend.
+// The per-IP limit above controls fairness, not cost: cost scales with the
+// number of addresses, and anyone abusing this has plenty. At roughly 2p a
+// message this caps a bad day near PS10 - and because each message costs two
+// KV writes (one per-IP, one global), it also keeps KV inside Cloudflare's
+// free 1,000-writes-a-day allowance.
+const GLOBAL_DAILY_MAX = 500;
 const MAX_INPUT_CHARS = 4000;
 const MAX_MESSAGES = 40;
 
@@ -87,6 +95,41 @@ async function checkRateLimit(env: Env, ip: string): Promise<boolean> {
   return true;
 }
 
+// UTC day, so the ceiling resets at midnight GMT rather than drifting with
+// whichever edge location happens to serve the request.
+function globalKey(now: number): string {
+  return `global:${new Date(now).toISOString().slice(0, 10)}`;
+}
+
+// Returns false once the day's site-wide allowance is spent.
+//
+// KV is eventually consistent, so under a burst this counts low and the real
+// total can overshoot GLOBAL_DAILY_MAX somewhat. That is fine for a spend
+// guard - it bounds a runaway bill, it is not an accounting ledger.
+async function checkGlobalLimit(env: Env, now: number): Promise<boolean> {
+  const key = globalKey(now);
+  const ttl = 48 * 60 * 60;
+
+  if (env.CHAT_RATE_LIMIT) {
+    const record = await env.CHAT_RATE_LIMIT.get(key, 'json');
+    const count = record?.count ?? 0;
+    if (count >= GLOBAL_DAILY_MAX) return false;
+    await env.CHAT_RATE_LIMIT.put(key, JSON.stringify({ count: count + 1, windowStart: now }), {
+      expirationTtl: ttl,
+    });
+    return true;
+  }
+
+  const local = localBuckets.get(key);
+  if (!local) {
+    localBuckets.set(key, { count: 1, windowStart: now });
+    return true;
+  }
+  if (local.count >= GLOBAL_DAILY_MAX) return false;
+  local.count += 1;
+  return true;
+}
+
 export async function onRequestOptions(context: { request: Request }): Promise<Response> {
   const origin = context.request.headers.get('origin') ?? '';
   return new Response(null, { status: 200, headers: corsHeaders(origin) });
@@ -134,6 +177,18 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
     return json(
       { error: 'The assistant is not configured yet. Please contact Jen directly.' },
       503,
+      origin
+    );
+  }
+
+  // Checked before the per-IP limit so a spent day costs no further writes.
+  if (!(await checkGlobalLimit(env, Date.now()))) {
+    return json(
+      {
+        error:
+          "Jen's assistant has reached its limit for today. Please try again tomorrow, or book a call with Jen directly.",
+      },
+      429,
       origin
     );
   }
